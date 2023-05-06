@@ -4,5 +4,34 @@ dev_addr: "127.0.0.1:8000"
 docs_dir: docs
 site_author: "Mohit Kumar" 
 site_description: "My Notes for 100 Days of AWS"
+repo_url: "https://github.com/mohitkr05/100daysofaws"
+
 theme: 
- name: "mkdocs"
+ name: "material"
+
+# extra_css:
+#   - stylesheets/extra.css
+
+nav:
+  - Home: "index.md"
+  - Ask Question:  "https://techwithmohit.slack.com/archives/C056EFNJ1N1"
+
+markdown_extensions:
+  - extra
+  - toc
+  - codehilite
+  - tables
+  - meta 
+  - toc
+  - footnotes
+  - admonition
+  - attr_list
+  - pymdownx.tasklist
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg

@@ -1,7 +1,8 @@
-# 100 Days of AWS \#100DaysofAWS (100 दिन AWS के | शतंदिवस: AWS)
+# 100 Days of AWS (100 दिन AWS के | शतंदिवस: AWS)
+
+Welcome to the 100 Days of AWS series, which is about learning something new about AWS every weekday. Tweet with the tag \#100DaysofAWS
 
 ## About this series
-
 
 So I have decided to work on AWS for 100 days continously and record my journey. This would be a bit different then the journey of other Youtubers.
 
@@ -12,11 +13,11 @@ This repository contains a structured learning path designed to help learners pr
 The repository includes a variety of resources, including tutorials, exercises, videos, and sample projects, that cover a wide range of AWS services and features, including EC2, S3, Lambda, CloudFormation, and more.
 
 
-## Index
+## Daily chapters
 
 | Day | Date  | Done | Topic | English Video | Hindi Video  | 
 |:---: | :---: | :---: | :--- | :--- | :--- |
-|0|08/05/2023| :heavy_check_mark: | [Introduction to series](README.md) | [English]()| [Hindi Video - D1 - AWS Tutorial for Beginners - Getting Started with #AWS #100daysofaws](https://youtu.be/urDDqP7oUIw) | 
+|0|08/05/2023| :heavy_check_mark: | [Introduction to series](index.md) | [English video ]()| [Hindi Video - D1 - AWS Tutorial for Beginners - Getting Started with #AWS #100daysofaws](https://youtu.be/urDDqP7oUIw) | 
 |1|08/05/2023| :heavy_check_mark: | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) |  |  | 
 
 
@@ -30,5 +31,5 @@ The repository includes a variety of resources, including tutorials, exercises, 
 
 ## Donate
 
-Join the discussion here -   https://techwithmohit.slack.com/archives/C056EFNJ1N1
+Join the discussion here -   
 Access the notes here -   https://mohitkr05.github.io/100daysofaws/
