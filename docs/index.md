@@ -15,10 +15,10 @@ The repository includes a variety of resources, including tutorials, exercises, 
 
 ## Daily chapters
 
-| Day | Date  | Done | Topic | English Video | Hindi Video  | 
+| Day | Date  | Service | Topic | English Video | Hindi Video  | 
 |:---: | :---: | :---: | :--- | :--- | :--- |
-|0|08/05/2023| :heavy_check_mark: | [Introduction to series](index.md) | [English video ]()| [Hindi Video - D1 - AWS Tutorial for Beginners - Getting Started with #AWS #100daysofaws](https://youtu.be/urDDqP7oUIw) | 
-|1|08/05/2023| :heavy_check_mark: | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) |  |  | 
+|0|08/05/2023| Introduction | [Introduction to series](index.md) | [Introduction to #100daysofAWS - English](https://www.youtube.com/watch?v=dcJWjyEuOLA)| [Introduction to #100daysofaws - Hindi](https://www.youtube.com/watch?v=QtoXp0ylR-4) | 
+|1|08/05/2023| Introduction | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  | 
 
 
 
