@@ -16,11 +16,8 @@ The repository includes a variety of resources, including tutorials, exercises, 
 
 | Day | Date  | Done | Topic | English Video | Hindi Video  | 
 |:---: | :---: | :---: | :--- | :--- | :--- |
-|0|24/04/2023| :heavy_check_mark: | [Introduction to series](README.md) | [English]()|  | 
-|1|24/04/2023| :heavy_check_mark: | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) |  |  | 
-|2|25/04/2023| :heavy_check_mark: | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md)  | |  | 
-|3|26/04/2023| :heavy_check_mark: | [Introduction to Virtualization, VPS & Lightsail](dailynotes/01_introduction/D3-Introduction-to-Virtualization-VPS-Lightsail.md)  | |  | 
-|4|27/04/2023| :heavy_check_mark: | [Setting up a VPS on Amazon Lightsail](dailynotes/02_AmazonLightsail/D4-Setting-up-VPS-on-Lightsail.md)  | |  | 
+|0|08/05/2023| :heavy_check_mark: | [Introduction to series](README.md) | [English]()| [Hindi Video - D1 - AWS Tutorial for Beginners - Getting Started with #AWS #100daysofaws](https://youtu.be/urDDqP7oUIw) | 
+|1|08/05/2023| :heavy_check_mark: | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) |  |  | 
 
 
 
