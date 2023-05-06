@@ -12,17 +12,8 @@ This repository contains a structured learning path designed to help learners pr
 The repository includes a variety of resources, including tutorials, exercises, videos, and sample projects, that cover a wide range of AWS services and features, including EC2, S3, Lambda, CloudFormation, and more.
 
 
-## Index
 
 
-## Join the Slack discussion
+[![Join our slack community](images/slack.png)](https://techwithmohit.slack.com/archives/C056EFNJ1N1)
 
-## 
-
-
-## Subscribe
-
-## Donate
-
-Join the discussion here -   https://techwithmohit.slack.com/archives/C056EFNJ1N1
 Access the notes here -   https://mohitkr05.github.io/100daysofaws/

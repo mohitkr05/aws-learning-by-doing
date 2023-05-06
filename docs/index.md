@@ -21,15 +21,7 @@ The repository includes a variety of resources, including tutorials, exercises, 
 |1|08/05/2023| Introduction | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  | 
 
 
-
-## Join the Slack discussion
-
-## 
-
-
-## Subscribe
-
-## Donate
+[![Join our slack community](images/slack.png)](https://techwithmohit.slack.com/archives/C056EFNJ1N1)
 
 Join the discussion here -   
 Access the notes here -   https://mohitkr05.github.io/100daysofaws/
