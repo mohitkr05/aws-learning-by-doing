@@ -3,7 +3,7 @@ site/
 
 # Ignore the Python virtual environment directory
 # (Assuming it's named "venv")
-venv/
+myvenv/
 
 # Ignore any compiled Python files
 *.pyc
