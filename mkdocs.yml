@@ -1,0 +1,8 @@
+site_name: "100 Days of AWS"
+copyright: "Mohit Kumar"
+dev_addr: "127.0.0.1:8000"
+docs_dir: docs
+site_author: "Mohit Kumar" 
+site_description: "My Notes for 100 Days of AWS"
+theme: 
+ name: "mkdocs"
