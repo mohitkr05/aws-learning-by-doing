@@ -17,9 +17,9 @@ The repository includes a variety of resources, including tutorials, exercises, 
 
 | Day | Date  | Service | Topic | English Video | Hindi Video  | 
 |:---: | :---: | :---: | :--- | :--- | :--- |
-|0|08/05/2023| Introduction | [Introduction to series](index.md) | [Introduction to #100daysofAWS - English](https://www.youtube.com/watch?v=dcJWjyEuOLA)| [Introduction to #100daysofaws - Hindi](https://www.youtube.com/watch?v=QtoXp0ylR-4) | 
-|1|08/05/2023| Introduction | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  | 
-|2|09/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  | 
+|0|08/05/2023| Introduction | [Introduction to series](index.md) | [Introduction to #100daysofAWS - English](https://www.youtube.com/watch?v=dcJWjyEuOLA)| [Introduction to #100daysofaws - Hindi](https://www.youtube.com/watch?v=QtoXp0ylR-4) |
+|1|08/05/2023| Introduction | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  |
+|2|09/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
 
 [![Join our slack community](images/slack.png)](https://techwithmohit.slack.com/archives/C056EFNJ1N1)
 
