@@ -42,4 +42,4 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] Understand the NIST definition of Cloud Computing
 - [x] 5-4-3 Model of Cloud Computing
 - [x] Differences between IAAS/PAAS/SAAS
-- [x] (*Optional*) Enroll in the Cloud Computing Crash course [^1] - Ask for a FREE coupon on Discord.
+- [x] (*Optional*) Enroll in the Cloud Computing Crash course [^1] - Ask for a FREE coupon on Slack.
