@@ -1,0 +1,588 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My Notes for 100 Days of AWS">
+      
+      
+        <meta name="author" content="Mohit Kumar">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>Cloud Computing - 100 Days of AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cloud-computing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="100 Days of AWS" class="md-header__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            100 Days of AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cloud Computing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mohitkr05/100daysofaws" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="100 Days of AWS" class="md-nav__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    100 Days of AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mohitkr05/100daysofaws" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://techwithmohit.slack.com/archives/C056EFNJ1N1" class="md-nav__link">
+        Ask Question
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#day-2-checklist" class="md-nav__link">
+    Day 2 Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nist-definition-of-cloud-computing" class="md-nav__link">
+    NIST Definition of Cloud Computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-essential-characteristics" class="md-nav__link">
+    5 Essential Characteristics
+  </a>
+  
+    <nav class="md-nav" aria-label="5 Essential Characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-on-demand-self-service" class="md-nav__link">
+    1. On-Demand Self-Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-broad-network-access" class="md-nav__link">
+    2. Broad Network Access
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resource-pooling" class="md-nav__link">
+    3. Resource Pooling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rapid-elasticity" class="md-nav__link">
+    4. Rapid Elasticity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-measured-service" class="md-nav__link">
+    5. Measured Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-computing-deployment-models" class="md-nav__link">
+    Cloud Computing deployment Models
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Computing deployment Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-public-cloud" class="md-nav__link">
+    1. Public Cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-private-cloud" class="md-nav__link">
+    2. Private Cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-community-cloud" class="md-nav__link">
+    3. Community Cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hybrid-cloud" class="md-nav__link">
+    4. Hybrid Cloud
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-computing-service-models" class="md-nav__link">
+    Cloud Computing Service Models
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud Computing Service Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-infrastructure-as-a-service-iaas" class="md-nav__link">
+    1. Infrastructure as a Service (IaaS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-platform-as-a-service-paas" class="md-nav__link">
+    2. Platform as a Service (PaaS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-software-as-a-service-saas" class="md-nav__link">
+    3. Software as a Service (SaaS)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-computing-benefits" class="md-nav__link">
+    Cloud Computing Benefits
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-cloud-service-providers" class="md-nav__link">
+    List of Cloud Service Providers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-links" class="md-nav__link">
+    Reference Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="cloud-computing">Cloud Computing</h1>
+<h2 id="day-2-checklist">Day 2 Checklist</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> Understand what are the differences between a private data center and Cloud</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Understand the NIST definition of Cloud Computing</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 5-4-3 Model of Cloud Computing</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Differences between IAAS/PAAS/SAAS</li>
+<li class="task-list-item"><input type="checkbox" disabled/> (<em>Optional</em>) Enroll in the Cloud Computing Crash course <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> - Ask for a FREE coupon on Discord.</li>
+</ul>
+<h2 id="nist-definition-of-cloud-computing">NIST Definition of Cloud Computing</h2>
+<p>The National Institute of Standards and Technology (NIST) defines cloud computing as:</p>
+<blockquote>
+<p>"Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models." <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+</blockquote>
+<p>The five essential characteristics of cloud computing according to NIST are:</p>
+<ol>
+<li>On-demand self-service</li>
+<li>Broad network access</li>
+<li>Resource pooling</li>
+<li>Rapid elasticity</li>
+<li>Measured service</li>
+</ol>
+<p>The three service models of cloud computing according to NIST are:</p>
+<ol>
+<li>Software as a Service (SaaS)</li>
+<li>Platform as a Service (PaaS)</li>
+<li>Infrastructure as a Service (IaaS)</li>
+</ol>
+<p>The four deployment models of cloud computing according to NIST are:</p>
+<ol>
+<li>Public cloud</li>
+<li>Private cloud</li>
+<li>Community cloud</li>
+<li>Hybrid cloud</li>
+</ol>
+<h2 id="5-essential-characteristics">5 Essential Characteristics</h2>
+<h3 id="1-on-demand-self-service">1. On-Demand Self-Service</h3>
+<p>On-demand self-service allows users to provision computing resources, such as virtual machines, storage, and applications, automatically without requiring human intervention from the service provider. This enables users to quickly and easily access the resources they need to meet their business requirements.</p>
+<h3 id="2-broad-network-access">2. Broad Network Access</h3>
+<p>Broad network access enables users to access cloud computing resources over the Internet or other wide-area networks, using a range of devices, such as desktops, laptops, tablets, and smartphones. This allows users to access cloud computing resources from anywhere in the world, using any device with an Internet connection.</p>
+<h3 id="3-resource-pooling">3. Resource Pooling</h3>
+<p>Resource pooling allows cloud computing providers to serve multiple customers from a shared pool of computing resources. Providers can dynamically assign and reassign resources to customers as needed, based on their business requirements. This enables providers to maximize the efficiency and utilization of their computing resources, while providing customers with high availability and scalability.</p>
+<h3 id="4-rapid-elasticity">4. Rapid Elasticity</h3>
+<p>Rapid elasticity allows users to quickly and easily scale their computing resources up or down, based on their business requirements. This enables users to respond to changes in demand quickly and efficiently, without incurring the costs and complexity of maintaining their own computing infrastructure.</p>
+<h3 id="5-measured-service">5. Measured Service</h3>
+<p>Measured service enables users to pay only for the computing resources they use, on a pay-as-you-go basis. Providers can monitor and measure resource usage automatically, enabling users to pay only for the resources they consume, and to avoid upfront costs and long-term commitments.</p>
+<h2 id="cloud-computing-deployment-models">Cloud Computing deployment Models</h2>
+<h3 id="1-public-cloud">1. Public Cloud</h3>
+<p>Public cloud refers to cloud computing resources and services that are available to the general public over the Internet. Public cloud providers, such as Amazon Web Services, Microsoft Azure, and Google Cloud, offer a range of computing resources, including virtual machines, storage, databases, and applications, that users can access on a pay-as-you-go basis.</p>
+<h3 id="2-private-cloud">2. Private Cloud</h3>
+<p>Private cloud refers to cloud computing resources and services that are dedicated to a single organization or business, and are not shared with other organizations or the general public. Private cloud resources are typically hosted on-premises or in a data center, and are managed and maintained by the organization's IT department.</p>
+<h3 id="3-community-cloud">3. Community Cloud</h3>
+<p>Community cloud refers to cloud computing resources and services that are shared by a specific community of users, such as government agencies, educational institutions, or research organizations. Community cloud resources are typically designed to meet the specific needs of the community, and are managed and maintained by the community members.</p>
+<h3 id="4-hybrid-cloud">4. Hybrid Cloud</h3>
+<p>Hybrid cloud refers to a combination of two or more cloud computing deployment models, such as public cloud, private cloud, or community cloud. Hybrid cloud enables users to leverage the benefits of multiple cloud computing models, such as scalability and cost-effectiveness, while maintaining control over their sensitive data and applications.</p>
+<h2 id="cloud-computing-service-models">Cloud Computing Service Models</h2>
+<p>Cloud computing is typically categorized into three models:</p>
+<h3 id="1-infrastructure-as-a-service-iaas">1. Infrastructure as a Service (IaaS)</h3>
+<p>Provides users with access to computing infrastructure, such as virtual machines, storage, and networks, over the Internet. Users can deploy and manage their own software and applications on top of the IaaS infrastructure.</p>
+<h3 id="2-platform-as-a-service-paas">2. Platform as a Service (PaaS)</h3>
+<p>Provides users with access to a platform for developing, deploying, and managing software and applications, without the need to manage the underlying infrastructure. PaaS provides users with a pre-configured environment for developing and deploying their software and applications.</p>
+<h3 id="3-software-as-a-service-saas">3. Software as a Service (SaaS)</h3>
+<p>Provides users with access to software applications and services over the Internet, without the need to install and manage the software locally. SaaS enables users to access software and services on a pay-as-you-go basis, without the need to invest in expensive software licenses.</p>
+<h2 id="cloud-computing-benefits">Cloud Computing Benefits</h2>
+<p>Cloud computing offers several benefits to users, including:</p>
+<ul>
+<li>Scalability: Cloud computing enables users to scale their computing resources up or down based on their needs, allowing them to meet their changing business requirements and control costs effectively.</li>
+<li>Flexibility: Cloud computing provides users with the flexibility to choose the computing resources and services they need, without the need to invest in expensive hardware or software.</li>
+<li>Security: Cloud computing providers offer robust security features, such as encryption, firewalls, and identity and access management, to protect data and applications from unauthorized access and cyber threats.</li>
+<li>Reliability: Cloud computing providers offer high availability and fault tolerance, ensuring that applications and services are always up and running.</li>
+<li>Cost-effectiveness: Cloud computing offers pay-as-you-go pricing models, enabling users to pay only for the computing resources they use, and avoiding upfront costs and long-term commitments.</li>
+</ul>
+<h2 id="list-of-cloud-service-providers">List of Cloud Service Providers</h2>
+<ol>
+<li>Amazon Web Services (AWS): https://aws.amazon.com/</li>
+<li>Microsoft Azure: https://azure.microsoft.com/</li>
+<li>Google Cloud Platform (GCP): https://cloud.google.com/</li>
+<li>IBM Cloud: https://www.ibm.com/cloud</li>
+<li>Oracle Cloud: https://www.oracle.com/cloud/</li>
+<li>Alibaba Cloud: https://www.alibabacloud.com/</li>
+<li>DigitalOcean: https://www.digitalocean.com/</li>
+<li>Rackspace: https://www.rackspace.com/</li>
+<li>Salesforce: https://www.salesforce.com/cloud-computing/</li>
+<li>VMware Cloud: https://www.vmware.com/cloud</li>
+<li>Heroku: https://www.heroku.com/</li>
+<li>Linode: https://www.linode.com/</li>
+<li>Red Hat OpenShift: https://www.openshift.com/</li>
+<li>Digital Realty: https://www.digitalrealty.com/cloud</li>
+<li>SAP Cloud Platform: https://www.sap.com/products/cloud-platform.html</li>
+<li>Joyent: https://www.joyent.com/</li>
+<li>CenturyLink Cloud: https://www.ctl.io/</li>
+<li>OVHcloud: https://www.ovhcloud.com/</li>
+<li>Tencent Cloud: https://intl.cloud.tencent.com/</li>
+<li>Scaleway: https://www.scaleway.com/en/</li>
+</ol>
+<h2 id="reference-links">Reference Links</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://www.udemy.com/course/cloud-computing-fundamentals-a-crash-course/">Cloud Computing &amp; Cloud Native Fundamentals</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf">NIST SP 800-145</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Mohit Kumar
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
