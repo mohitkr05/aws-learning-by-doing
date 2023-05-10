@@ -14,16 +14,16 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>100 Days of AWS</title>
+        <title>Setting up a VPS on Amazon Lightsail - 100 Days of AWS</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
       
       
 
@@ -39,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#100-days-of-aws-100-aws-aws" class="md-skip">
+        <a href="#setting-up-a-vps-on-amazon-lightsail" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="100 Days of AWS" class="md-header__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
+    <a href="../../.." title="100 Days of AWS" class="md-header__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Setting up a VPS on Amazon Lightsail
             
           </span>
         </div>
@@ -175,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="100 Days of AWS" class="md-nav__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
+    <a href="../../.." title="100 Days of AWS" class="md-nav__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -204,100 +204,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#about-this-series" class="md-nav__link">
-    About this series
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daily-chapters" class="md-nav__link">
-    Daily chapters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-checklist" class="md-nav__link">
-    Detailed Checklist
-  </a>
-  
-    <nav class="md-nav" aria-label="Detailed Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#day-1" class="md-nav__link">
-    Day 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#day-2" class="md-nav__link">
-    Day 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-3-checklist" class="md-nav__link">
-    Day 3 Checklist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-4-checklist" class="md-nav__link">
-    Day 4 Checklist
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -344,56 +255,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about-this-series" class="md-nav__link">
-    About this series
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daily-chapters" class="md-nav__link">
-    Daily chapters
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-checklist" class="md-nav__link">
-    Detailed Checklist
-  </a>
-  
-    <nav class="md-nav" aria-label="Detailed Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#day-1" class="md-nav__link">
-    Day 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#day-2" class="md-nav__link">
-    Day 2
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-3-checklist" class="md-nav__link">
-    Day 3 Checklist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#day-4-checklist" class="md-nav__link">
     Day 4 Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-lightsail-dashboard-walkthrough" class="md-nav__link">
+    Amazon Lightsail Dashboard Walkthrough
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-blueprints" class="md-nav__link">
+    Understanding Blueprints
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-vps" class="md-nav__link">
+    Creating a new VPS
   </a>
   
 </li>
@@ -416,101 +300,54 @@
   
 
 
-<h1 id="100-days-of-aws-100-aws-aws">100 Days of AWS (100 दिन AWS के | शतंदिवस: AWS)</h1>
-<p>Welcome to the 100 Days of AWS series, which is about learning something new about AWS every weekday. Tweet with the tag #100DaysofAWS</p>
-<h2 id="about-this-series">About this series</h2>
-<p>So I have decided to work on AWS for 100 days continously and record my journey. This would be a bit different then the journey of other Youtubers.</p>
-<p>First and foremost, this journey will be available in Hindi (and sometimes in English) videos.</p>
-<p>This repository contains a structured learning path designed to help learners progress from beginner to advanced level in AWS. The path is divided into 100 days, with each day containing a set of tasks and challenges that build on the previous day's concepts.</p>
-<p>The repository includes a variety of resources, including tutorials, exercises, videos, and sample projects, that cover a wide range of AWS services and features, including EC2, S3, Lambda, CloudFormation, and more.</p>
-<h2 id="daily-chapters">Daily chapters</h2>
-<table>
-<thead>
-<tr>
-<th align="center">Day</th>
-<th align="center">Date</th>
-<th align="center">Service</th>
-<th align="left">Topic</th>
-<th align="left">English Video</th>
-<th align="left">Hindi Video</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">0</td>
-<td align="center">08/05/2023</td>
-<td align="center">Introduction</td>
-<td align="left"><a href="./">Introduction to series</a></td>
-<td align="left"><a href="https://www.youtube.com/watch?v=dcJWjyEuOLA">Introduction to #100daysofAWS - English</a></td>
-<td align="left"><a href="https://www.youtube.com/watch?v=QtoXp0ylR-4">Introduction to #100daysofaws - Hindi</a></td>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">08/05/2023</td>
-<td align="center">Introduction</td>
-<td align="left"><a href="dailynotes/01_introduction/D1-Introduction-to-AWS/">Introduction to AWS</a></td>
-<td align="left"><a href="https://www.youtube.com/watch?v=9nnk6gNMCQc">Introduction to AWS in English</a></td>
-<td align="left"><a href="https://youtu.be/urDDqP7oUIw">Introduction to AWS in Hindi</a></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">09/05/2023</td>
-<td align="center">Introduction</td>
-<td align="left"><a href="dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing/">Introduction to Cloud Computing</a></td>
-<td align="left"><a href="https://youtu.be/AKTfLzlOMfM">Introduction to Cloud Computing in English</a></td>
-<td align="left"><a href="https://youtu.be/3TktHCaWG94">Introduction to Cloud Computing in Hindi</a></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">10/05/2023</td>
-<td align="center">Introduction</td>
-<td align="left"><a href="dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing/">Introduction to Cloud Computing</a></td>
-<td align="left"><a href="https://youtu.be/AKTfLzlOMfM">Introduction to Cloud Computing in English</a></td>
-<td align="left"><a href="https://youtu.be/3TktHCaWG94">Introduction to Cloud Computing in Hindi</a></td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">11/05/2023</td>
-<td align="center">Amazon Lightsail</td>
-<td align="left"><a href="dailynotes/02_lightsail/D4-Setting-up-VPS-on-Lightsail/">Setting up VPS on Lightsail</a></td>
-<td align="left"><a href="https://youtu.be/qOitEwrHn0s">Setting up VPS on Lightsail - English</a></td>
-<td align="left"><a href="https://youtu.be/ZLewZ66r3ZE">Setting up VPS on Lightsail - Hindi</a></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://techwithmohit.slack.com/archives/C056EFNJ1N1"><img alt="Join our slack community" src="images/slack.png" /></a></p>
-<p>Access the notes here -   https://mohitkr05.github.io/100daysofaws/</p>
-<h2 id="detailed-checklist">Detailed Checklist</h2>
-<h3 id="day-1">Day 1</h3>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Get to know more about AWS - Read the links given below</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Create an AWS account</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Go to IAM and secure your Root account</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Create a seperate account for Console access</li>
-</ul>
-<h3 id="day-2">Day 2</h3>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Understand what are the differences between a private data center and Cloud</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Understand the NIST definition of Cloud Computing</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> 5-4-3 Model of Cloud Computing</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Differences between IAAS/PAAS/SAAS</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> (<em>Optional</em>) Enroll in the Cloud Computing Crash course [^1] - Ask for a FREE coupon on Slack.</li>
-</ul>
-<h2 id="day-3-checklist">Day 3 Checklist</h2>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Understand the concept of Virtualization</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> How virtualization enables cloud computing</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> What is a Virtual Private Server (VPS) ?</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> How VPS were part of web hosting solutions.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Introduction to AWS Lightsail</li>
-</ul>
+<h1 id="setting-up-a-vps-on-amazon-lightsail">Setting up a VPS on Amazon Lightsail</h1>
 <h2 id="day-4-checklist">Day 4 Checklist</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> Walkthrough of  Amazon Lightsail account</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Understanding Blueprints</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Creating a new VPS using a LAMP Stack</li>
-<li class="task-list-item"><input type="checkbox" disabled checked/> Connecting to the instance using web console</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Walkthrough of  Amazon Lightsail account</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Understanding Blueprints</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Creating a new VPS using a LAMP Stack</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Connecting to the instance using web console</li>
 </ul>
+<h2 id="amazon-lightsail-dashboard-walkthrough">Amazon Lightsail Dashboard Walkthrough</h2>
+<ul>
+<li>
+<p>The Amazon Lightsail dashboard is the main interface for managing your Lightsail resources.</p>
+</li>
+<li>
+<p>You'll see </p>
+</li>
+<li>overview of your account, including information about your resources, billing, and notifications.</li>
+<li>options to manage your instances, databases, load balancers, DNS zones, and more.</li>
+<li>The Instances tab displays a list of your virtual private servers (VPS), including their current status, IP address, and region.</li>
+<li>The Databases tab displays a list of your managed databases, including their status, endpoint, and engine type. </li>
+<li>The Load Balancers tab displays a list of your load balancers, including their current status and endpoint. </li>
+<li>The Networking tab includes options to manage your DNS zones, create static IP addresses, and configure firewall rules.</li>
+</ul>
+<h2 id="understanding-blueprints">Understanding Blueprints</h2>
+<ul>
+<li>
+<p>A blueprint in Amazon Lightsail is a pre-configured template for launching a virtual private server (VPS) or an application, such as a content management system (CMS) or a web application framework.</p>
+</li>
+<li>
+<p>Blueprints are designed to simplify the process of launching a new instance by providing a pre-built configuration that includes the necessary software, settings, and services.</p>
+</li>
+<li>
+<p>Each blueprint includes a specific operating system, application stack, and server configuration, along with recommended settings for security, performance, and scalability.</p>
+</li>
+<li>
+<p>Lightsail offers a wide variety of blueprints for different use cases, including popular CMS platforms like WordPress, Drupal, and Joomla, as well as web application frameworks like Ruby on Rails, Node.js, and Django.</p>
+</li>
+</ul>
+<h2 id="creating-a-new-vps">Creating a new VPS</h2>
+<ol>
+<li>Click the "Create instance" button in the top right corner of the dashboard.</li>
+<li>Select a blueprint for your instance. As of now use WordPress from Bitnami.</li>
+<li>Choose your instance plan. </li>
+<li>Enter a unique name for your instance, and select the region where you want to launch it. </li>
+<li>Click the "Create instance" button to launch your new VPS.</li>
+<li>Wait for Lightsail to provision your new instance. This may take a few minutes, depending on the size of your instance and the availability of resources in your selected region.</li>
+<li>Once your instance is ready, you can access it via the Lightsail console. </li>
+</ol>
 
 
 
@@ -552,10 +389,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   </body>
