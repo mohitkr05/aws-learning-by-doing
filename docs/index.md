@@ -46,7 +46,7 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] Differences between IAAS/PAAS/SAAS
 - [x] (*Optional*) Enroll in the Cloud Computing Crash course [^1] - Ask for a FREE coupon on Slack.
 
-## Day 3 Checklist
+### Day 3
 
 - [x] Understand the concept of Virtualization
 - [x] How virtualization enables cloud computing
@@ -54,7 +54,7 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] How VPS were part of web hosting solutions.
 - [x] Introduction to AWS Lightsail
 
-## Day 4 Checklist
+### Day 4
 
 - [x] Walkthrough of  Amazon Lightsail account
 - [x] Understanding Blueprints
