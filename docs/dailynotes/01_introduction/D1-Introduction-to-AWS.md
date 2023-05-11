@@ -81,6 +81,6 @@ In addition, AWS provides a wealth of resources to help customers learn about AW
 ## Reference Links
 
 [^1]: [AWS Homepage](https://aws.amazon.com/)
-[^2]: [Day 2- What is Cloud Computing](Day-2.md)
+[^2]: [Day 2- What is Cloud Computing](D2-Introduction-to-Cloud-Computing.md)
 
 
