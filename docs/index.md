@@ -22,6 +22,7 @@ The repository includes a variety of resources, including tutorials, exercises, 
 |2|09/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
 |3|10/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
 |4|11/05/2023| Amazon Lightsail | [Setting up VPS on Lightsail](dailynotes/02_lightsail/D4-Setting-up-VPS-on-Lightsail.md) | [Setting up VPS on Lightsail - English](https://youtu.be/qOitEwrHn0s) | [Setting up VPS on Lightsail - Hindi](https://youtu.be/ZLewZ66r3ZE)  |
+|5|12/05/2023| Amazon Lightsail | [Connecting to instance using SSH](dailynotes/02_lightsail/D5-Connecting-with-SSH.md) | [Connecting to Instance using SSH - English](https://youtu.be/ZOXSnu3ekbI) | [Connecting to Instance using SSH - Hindi](https://youtu.be/IASN4jNaA-8)  |
 
 [![Join our slack community](images/slack.png)](https://techwithmohit.slack.com/archives/C056EFNJ1N1)
 
@@ -60,3 +61,10 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] Understanding Blueprints
 - [x] Creating a new VPS using a LAMP Stack
 - [x] Connecting to the instance using web console
+
+### Day 5
+
+- [x] Understanding Key exchanges
+- [x] Understanding SSH
+- [x] How SSH works
+- [x] Using the key pair to login to the instance
