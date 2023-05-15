@@ -14,7 +14,7 @@ theme:
 
 nav:
   - Home: "index.md"
-  - Ask Question:  "https://techwithmohit.slack.com/archives/C056EFNJ1N1"
+  - Join Discord:  "https://discord.gg/tnZnWqnu9F"
 
 markdown_extensions:
   - extra
