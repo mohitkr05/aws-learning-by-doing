@@ -15,16 +15,20 @@ The repository includes a variety of resources, including tutorials, exercises, 
 
 ## Daily chapters
 
-| Day | Date  | Service | Topic | English Video | Hindi Video  | 
-|:---: | :---: | :---: | :--- | :--- | :--- |
-|0|08/05/2023| Introduction | [Introduction to series](index.md) | [Introduction to #100daysofAWS - English](https://www.youtube.com/watch?v=dcJWjyEuOLA)| [Introduction to #100daysofaws - Hindi](https://www.youtube.com/watch?v=QtoXp0ylR-4) |
-|1|08/05/2023| Introduction | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  |
-|2|09/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
-|3|10/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
-|4|11/05/2023| Amazon Lightsail | [Setting up VPS on Lightsail](dailynotes/02_lightsail/D4-Setting-up-VPS-on-Lightsail.md) | [Setting up VPS on Lightsail - English](https://youtu.be/qOitEwrHn0s) | [Setting up VPS on Lightsail - Hindi](https://youtu.be/ZLewZ66r3ZE)  |
-|5|12/05/2023| Amazon Lightsail | [Connecting to instance using SSH](dailynotes/02_lightsail/D5-Connecting-with-SSH.md) | [Connecting to Instance using SSH - English](https://youtu.be/ZOXSnu3ekbI) | [Connecting to Instance using SSH - Hindi](https://youtu.be/IASN4jNaA-8)  |
+|Week |  Day | Date  | Service | Topic | English Video | Hindi Video  |
+|:---:|:---: | :---: | :---: | :--- | :--- | :--- |
+|19 | 0|08/05/2023| Introduction | [Introduction to series](index.md) | [Introduction to #100daysofAWS - English](https://www.youtube.com/watch?v=dcJWjyEuOLA)| [Introduction to #100daysofaws - Hindi](https://www.youtube.com/watch?v=QtoXp0ylR-4) |
+|19 | 1|08/05/2023| Introduction | [Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md) | [Introduction to AWS in English](https://www.youtube.com/watch?v=9nnk6gNMCQc) | [Introduction to AWS in Hindi](https://youtu.be/urDDqP7oUIw)  |
+|19 | 2|09/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
+|19 | 3|10/05/2023| Introduction | [Introduction to Cloud Computing](dailynotes/01_introduction/D2-Introduction-to-Cloud-Computing.md) | [Introduction to Cloud Computing in English](https://youtu.be/AKTfLzlOMfM) | [Introduction to Cloud Computing in Hindi](https://youtu.be/3TktHCaWG94)  |
+|19 | 4|11/05/2023| Amazon Lightsail | [Setting up VPS on Lightsail](dailynotes/02_lightsail/D4-Setting-up-VPS-on-Lightsail.md) | [Setting up VPS on Lightsail - English](https://youtu.be/qOitEwrHn0s) | [Setting up VPS on Lightsail - Hindi](https://youtu.be/ZLewZ66r3ZE)  |
+|19 | 5|12/05/2023| Amazon Lightsail | [Connecting to instance using SSH](dailynotes/02_lightsail/D5-Connecting-with-SSH.md) | [Connecting to Instance using SSH - English](https://youtu.be/ZOXSnu3ekbI) | [Connecting to Instance using SSH - Hindi](https://youtu.be/IASN4jNaA-8)  |
+|20 | 6|15/05/2023| Amazon Lightsail | [Managing your Lightsail Instance](dailynotes/02_lightsail/D6-Managing-Lightsail-instances.md) | [Managing your Lightsail Instance - English](https://youtu.be/j7PPjWlMcmo) | [Managing your Lightsail Instance - Hindi](https://youtu.be/2qNCUUCbsfA)  |
 
-[![Join our slack community](images/slack.png)](https://techwithmohit.slack.com/archives/C056EFNJ1N1)
+
+
+
+[![Join our Discord community](images/discord.png)](https://discord.gg/tnZnWqnu9F)
 
 
 Access the notes here -   https://mohitkr05.github.io/100daysofaws/
@@ -68,3 +72,11 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] Understanding SSH
 - [x] How SSH works
 - [x] Using the key pair to login to the instance
+
+## Day 6
+
+- [x] Understanding more about the Lightsail instance
+- [x] Installing software on your instance
+- [x] Managing your Instance
+- [x] Monitoring the instance.
+- [x] Understand Burstable instances
