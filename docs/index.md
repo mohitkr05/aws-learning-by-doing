@@ -31,6 +31,7 @@ The repository includes a variety of resources, including tutorials, exercises, 
 
 [![Join our Discord community](images/discord.png)](https://discord.gg/tnZnWqnu9F)
 
+<!--- https://trello.com/b/aC3zlRxN/100-days-of-aws >
 
 Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 
