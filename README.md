@@ -56,3 +56,12 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] Understanding SSH
 - [x] How SSH works
 - [x] Using the key pair to login to the instance
+
+
+### Day 6
+
+- [x] Understanding more about the Lightsail instance
+- [x] Installing software on your instance
+- [x] Managing your Instance
+- [x] Monitoring the instance.
+- [x] Understand Burstable instances
