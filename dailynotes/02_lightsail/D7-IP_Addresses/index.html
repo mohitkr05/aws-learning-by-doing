@@ -1,0 +1,470 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My Notes for 100 Days of AWS">
+      
+      
+        <meta name="author" content="Mohit Kumar">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>IP addressing in Amazon lightsail - 100 Days of AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ip-addressing-in-amazon-lightsail" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="100 Days of AWS" class="md-header__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            100 Days of AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IP addressing in Amazon lightsail
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mohitkr05/100daysofaws" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="100 Days of AWS" class="md-nav__button md-logo" aria-label="100 Days of AWS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    100 Days of AWS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mohitkr05/100daysofaws" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/tnZnWqnu9F" class="md-nav__link">
+        Join Discord
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#day-7" class="md-nav__link">
+    Day 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ip-address" class="md-nav__link">
+    What is IP address?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ipv4-vs-ipv6" class="md-nav__link">
+    IPv4 vs IPv6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-nat" class="md-nav__link">
+    What is NAT?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-ip-addressing-works-in-lightsail" class="md-nav__link">
+    How IP addressing works in Lightsail
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-static-ip" class="md-nav__link">
+    Creating a Static IP
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ip-addressing-in-amazon-lightsail">IP addressing in Amazon lightsail</h1>
+<h2 id="day-7">Day 7</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> What is IP addresses?</li>
+<li class="task-list-item"><input type="checkbox" disabled/> IPv4 vs IPv6</li>
+<li class="task-list-item"><input type="checkbox" disabled/> What is NAT?</li>
+<li class="task-list-item"><input type="checkbox" disabled/> How IP networking works in Cloud</li>
+<li class="task-list-item"><input type="checkbox" disabled/> Types of IP addresses</li>
+</ul>
+<h2 id="what-is-ip-address">What is IP address?</h2>
+<ul>
+<li>An IP address is a unique identifier that's used to identify devices on a network.</li>
+<li>IP addresses are made up of a series of numbers separated by periods, like 192.168.0.1.</li>
+<li>There are two types of IP addresses: IPv4 and IPv6.</li>
+<li>IPv4 addresses are the most common and are made up of four sets of numbers between 0 and 255.</li>
+<li>IPv6 addresses are newer and use a longer format that includes letters and numbers.</li>
+<li>Every device on a network needs a unique IP address to communicate with other devices.</li>
+<li>IP addresses are assigned by a network administrator or automatically by a device.</li>
+<li>Private IP addresses are used for communication within a local network, while public IP addresses are used for communication over the internet.</li>
+<li>IP addresses can be static (never change) or dynamic (assigned automatically and can change over time).</li>
+<li>Private IP addresses in each classes are as follows</li>
+<li>Class A: 10.0.0.0 to 10.255.255.255</li>
+<li>Class B: 172.16.0.0 to 172.31.255.255</li>
+<li>Class C: 192.168.0.0 to 192.168.255.255</li>
+</ul>
+<h2 id="ipv4-vs-ipv6">IPv4 vs IPv6</h2>
+<table>
+<thead>
+<tr>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32-bit address</td>
+<td>128-bit address</td>
+</tr>
+<tr>
+<td>Addresses are in decimal format</td>
+<td>Addresses are in hexadecimal format</td>
+</tr>
+<tr>
+<td>Supports up to 4.3 billion unique addresses</td>
+<td>Supports up to 3.4 x 10^38 unique addresses</td>
+</tr>
+<tr>
+<td>Uses ARP to map IP addresses to MAC addresses</td>
+<td>Uses ICMPv6 Neighbor Discovery to map IP addresses to MAC addresses</td>
+</tr>
+<tr>
+<td>No built-in security features</td>
+<td>Built-in support for IPSec security</td>
+</tr>
+<tr>
+<td>Header contains 13 fields</td>
+<td>Header contains 8 fields</td>
+</tr>
+<tr>
+<td>Header does not identify packet flow for QoS handling by routers</td>
+<td>Header includes flow label for QoS handling by routers</td>
+</tr>
+<tr>
+<td>Fragments packets for reassembly by hosts</td>
+<td>Does not fragment packets</td>
+</tr>
+<tr>
+<td>IPv4 options are rarely used</td>
+<td>IPv6 options are more commonly used for mobility, quality of service, and routing</td>
+</tr>
+<tr>
+<td>Classful addressing</td>
+<td>Classless addressing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-nat">What is NAT?</h2>
+<ul>
+<li>NAT is a technique used to share a single public IP address across multiple devices on a private network.</li>
+<li>NAT can be compared to a local Wi-Fi router, where devices on a local network are assigned private IP addresses.</li>
+<li>When a device on the local network wants to communicate with a resource on the internet, the router uses NAT to translate the private IP address of the device to the public IP address assigned by the ISP.</li>
+<li>This allows the device to communicate with the resource on the internet while still keeping its private IP address hidden from the outside world.</li>
+<li>When the resource on the internet sends a response back to the device, the router uses NAT to translate the public IP address back to the private IP address of the device using following methods</li>
+<li>Static NAT: In this type of NAT, a one-to-one mapping is created between a public IP address and a private IP address. This is useful when you have a single device that needs to be accessible from the internet.</li>
+<li>Dynamic NAT: In dynamic NAT, a pool of public IP addresses is assigned to a group of private IP addresses. When a device on the private network sends a request to the internet, a public IP address is dynamically assigned from the pool and mapped to the private IP address of the device.</li>
+<li>Overloading NAT (or PAT): In this type of NAT, a single public IP address is shared by multiple devices on the private network. Each device is assigned a unique port number that is used to map incoming traffic from the public IP address to the correct device on the private network.</li>
+<li>Destination NAT: This type of NAT is used to forward traffic from a public IP address to a private IP address, based on the destination IP address of the incoming traffic.</li>
+</ul>
+<h2 id="how-ip-addressing-works-in-lightsail">How IP addressing works in Lightsail</h2>
+<ul>
+<li>When you create an instance in Lightsail, it is assigned a private IP address that is only accessible within a <em>private</em> network</li>
+<li>Each instance is assigned a private IP address by default, which is used for internal communication between instances and services within your account.</li>
+<li>In Amazon Lightsail, a public IP address is attached to a private IP address through the use of Network Address Translation (NAT).</li>
+<li>To make your instance accessible from the internet, you need to associate a public IP address with it.</li>
+<li>The NAT system in the network infrastructure automatically maps the public IP address to the private IP address.</li>
+<li>This allows traffic to be routed from the internet to your instance using the public IP address.</li>
+<li>By using NAT to associate a public IP address with your instance's private IP address, you can enable internet connectivity for your instance while still keeping it protected within your VPC network.</li>
+<li>You can assign a public IP address to your instance, which can be used to access your instance over the internet. This can be useful if you want to host a website or other internet-facing application.</li>
+<li>There are two types of public IP addresses available in Lightsail: static and dynamic. A static IP address remains the same for the lifetime of your instance, while a dynamic IP address can change if you stop and start your instance.</li>
+</ul>
+<h2 id="creating-a-static-ip">Creating a Static IP</h2>
+<ul>
+<li>To allocate a static IP address to your instance by navigating to the Networking tab in the Lightsail console and selecting "Create static IP." Once you have a static IP address, you can associate it with your instance to ensure that it remains the same even if you stop and start your instance.</li>
+<li>It's important to note that there may be additional charges for using a static IP address in Lightsail, so be sure to check the pricing details before enabling this feature.</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Mohit Kumar
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+    
+  </body>
+</html>
