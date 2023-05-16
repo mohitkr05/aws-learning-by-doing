@@ -65,3 +65,12 @@ Access the notes here -   https://mohitkr05.github.io/100daysofaws/
 - [x] Managing your Instance
 - [x] Monitoring the instance.
 - [x] Understand Burstable instances
+
+
+## Day 7
+
+- [x] What is IP addresses?
+- [x] IPv4 vs IPv6
+- [x] What is NAT?
+- [x] How IP networking works in Cloud
+- [x] Types of IP addresses
