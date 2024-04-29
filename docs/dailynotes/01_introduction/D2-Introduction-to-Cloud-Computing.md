@@ -1,7 +1,7 @@
 
 # Cloud Computing
 
-## Day 2 Checklist
+## Day 2 Goals
 
 - [ ] Understand what are the differences between a private data center and Cloud
 - [ ] Understand the NIST definition of Cloud Computing

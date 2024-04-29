@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Detail Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+     .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .col-md-6 {
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .car-image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="car.jpeg" alt="Car Image" class="car-image">
+      </div>
+      <div class="col-md-6">
+        <h1>Car Name</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus ipsum at dapibus eleifend.</p>
+        <ul>
+          <li>Feature 1: Lorem ipsum</li>
+          <li>Feature 2: Lorem ipsum</li>
+          <li>Feature 3: Lorem ipsum</li>
+          <!-- Add more features here -->
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus ipsum at dapibus eleifend.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

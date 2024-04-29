@@ -1,6 +1,6 @@
 # Understanding SSH and how to connect to the instance
 
-## Day 5 Checklist
+## Day 5 Goals
 
 - [ ] Understanding Key exchanges
 - [ ] Understanding SSH

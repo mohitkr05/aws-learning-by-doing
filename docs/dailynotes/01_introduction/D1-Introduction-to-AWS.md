@@ -1,9 +1,9 @@
 # Introduction to AWS
 
 
-## Day 1 Checklist
+## Day 1 Goals
 
-- [ ] Get to know more about AWS - Read the links given below
+- [ ] Get to know more about AWS
 - [ ] Create an AWS account 
 - [ ] Go to IAM and secure your Root account 
 - [ ] Create a seperate account for Console access

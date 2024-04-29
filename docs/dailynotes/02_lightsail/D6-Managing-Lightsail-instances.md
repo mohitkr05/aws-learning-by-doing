@@ -1,6 +1,6 @@
 # Managing your Lightsail instance
 
-## Day 6
+## Day 6 Goals
 
 - [ ] Understanding more about the Lightsail instance
 - [ ] Installing software on your instance

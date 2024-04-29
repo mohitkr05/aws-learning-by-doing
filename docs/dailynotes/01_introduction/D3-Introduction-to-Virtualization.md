@@ -1,6 +1,6 @@
 # Introduction to Virtualization, VPS and AWS Lightsail
 
-## Day 3 Checklist
+## Day 3 Goals
 
 - [ ] Understand the concept of Virtualization
 - [ ] How virtualization enables cloud computing

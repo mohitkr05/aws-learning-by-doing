@@ -1,6 +1,6 @@
 # IP addressing in Amazon lightsail
 
-## Day 7
+## Day 7 Goals
 
 - [ ] What is IP addresses?
 - [ ] IPv4 vs IPv6

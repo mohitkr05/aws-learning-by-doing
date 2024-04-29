@@ -1,7 +1,7 @@
 # Setting up a VPS on Amazon Lightsail
 
 
-## Day 4 Checklist
+## Day 4 Goals
 
 - [ ] Walkthrough of  Amazon Lightsail account
 - [ ] Understanding Blueprints
