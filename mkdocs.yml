@@ -1,10 +1,10 @@
-site_name: "100 Days of AWS"
+site_name: "101 Days of AWS"
 copyright: "Mohit Kumar"
 dev_addr: "127.0.0.1:8000"
 docs_dir: docs
 site_author: "Mohit Kumar" 
-site_description: "My Notes for 100 Days of AWS"
-repo_url: "https://github.com/mohitkr05/100daysofaws"
+site_description: "My Notes for 101 Days of AWS"
+repo_url: "https://github.com/mohitkr05/101daysofaws"
 
 theme: 
  name: "material"
