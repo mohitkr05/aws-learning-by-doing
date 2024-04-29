@@ -7,7 +7,7 @@ site_description: "My Notes for 101 Days of AWS"
 repo_url: "https://github.com/mohitkr05/101daysofaws"
 
 theme: 
- name: "material"
+ name: "mkdocs"
 
 # extra_css:
 #   - stylesheets/extra.css
@@ -26,12 +26,3 @@ markdown_extensions:
   - footnotes
   - admonition
   - attr_list
-  - pymdownx.tasklist
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg

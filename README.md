@@ -1,6 +1,6 @@
 # 101 Days of AWS 
 
-Welcome to the 100 Days of AWS series, which is about learning something new about AWS every weekday. Tweet with the tag \#101DaysofAWS
+Welcome to the 101 Days of AWS series, which is about learning something new about AWS every weekday. Tweet with the tag \#101DaysofAWS
 
 ## About this series
 
@@ -13,59 +13,16 @@ The repository includes a variety of resources, including tutorials, exercises, 
 Access the notes here -   https://mohitkr05.github.io/101daysofaws/
 
 
-## Detailed Checklist
+## Daily chapters
 
-### Day 1
-
-- [x] Get to know more about AWS - Read the links given below
-- [x] Create an AWS account
-- [x] Go to IAM and secure your Root account
-- [x] Create a seperate account for Console access
-
-### Day 2
-
-- [x] Understand what are the differences between a private data center and Cloud
-- [x] Understand the NIST definition of Cloud Computing
-- [x] 5-4-3 Model of Cloud Computing
-- [x] Differences between IAAS/PAAS/SAAS
-- [x] (*Optional*) Enroll in the Cloud Computing Crash course [^1] - Ask for a FREE coupon on Slack.
-
-### Day 3
-
-- [x] Understand the concept of Virtualization
-- [x] How virtualization enables cloud computing
-- [x] What is a Virtual Private Server (VPS) ?
-- [x] How VPS were part of web hosting solutions.
-- [x] Introduction to AWS Lightsail
-
-### Day 4
-
-- [x] Walkthrough of  Amazon Lightsail account
-- [x] Understanding Blueprints
-- [x] Creating a new VPS using a LAMP Stack
-- [x] Connecting to the instance using web console
-
-### Day 5
-
-- [x] Understanding Key exchanges
-- [x] Understanding SSH
-- [x] How SSH works
-- [x] Using the key pair to login to the instance
+1. [Day1 - Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md)
+- [Day1 - Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md)
+- [Day1 - Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md)
+- [Day1 - Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md)
+- [Day1 - Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md)
+- [Day1 - Introduction to AWS](dailynotes/01_introduction/D1-Introduction-to-AWS.md)
 
 
-### Day 6
+<!--- https://trello.com/b/aC3zlRxN/100-days-of-aws -->
 
-- [x] Understanding more about the Lightsail instance
-- [x] Installing software on your instance
-- [x] Managing your Instance
-- [x] Monitoring the instance.
-- [x] Understand Burstable instances
-
-
-## Day 7
-
-- [x] What is IP addresses?
-- [x] IPv4 vs IPv6
-- [x] What is NAT?
-- [x] How IP networking works in Cloud
-- [x] Types of IP addresses
+Access the notes here -   https://mohitkr05.github.io/101daysofaws/
