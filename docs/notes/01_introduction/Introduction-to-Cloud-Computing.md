@@ -1,17 +1,6 @@
 
 # Cloud Computing
 
-## Day 2 Goals
-
-- [ ] Understand what are the differences between a private data center and Cloud
-- [ ] Understand the NIST definition of Cloud Computing
-- [ ] 5-4-3 Model of Cloud Computing
-- [ ] Differences between IAAS/PAAS/SAAS
-- [ ] (*Optional*) Enroll in the Cloud Computing Crash course [^1] - Ask for a FREE coupon on Discord.
-
-
-
-
 ## NIST Definition of Cloud Computing
 
 The National Institute of Standards and Technology (NIST) defines cloud computing as:

@@ -1,14 +1,5 @@
 # Introduction to AWS
 
-
-## Day 1 Goals
-
-- [ ] Get to know more about AWS
-- [ ] Create an AWS account 
-- [ ] Go to IAM and secure your Root account 
-- [ ] Create a seperate account for Console access
-
-
 ## What is AWS?
 
 Amazon Web Services (AWS)[^1] is a cloud computing[^2] platform provided by Amazon, offering a wide range of services to individuals, organizations, and governments. It is a comprehensive, secure, and scalable platform that enables customers to build, deploy, and manage applications and services with ease and flexibility.

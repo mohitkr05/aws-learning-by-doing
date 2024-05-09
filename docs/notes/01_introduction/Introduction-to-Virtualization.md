@@ -1,14 +1,5 @@
 # Introduction to Virtualization, VPS and AWS Lightsail
 
-## Day 3 Goals
-
-- [ ] Understand the concept of Virtualization
-- [ ] How virtualization enables cloud computing
-- [ ] What is a Virtual Private Server (VPS) ?
-- [ ] How VPS were part of web hosting solutions.
-- [ ] Introduction to AWS Lightsail
-
-
 ## Virtualization
 
 Virtualization is a technology that enables the creation of multiple virtual versions of hardware and software resources, such as servers, operating systems, and storage devices, on a single physical machine. It allows users to run multiple operating systems and applications on a single physical machine, without having to purchase additional hardware or software resources.
