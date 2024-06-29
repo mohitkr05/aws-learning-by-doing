@@ -2,7 +2,7 @@
 
 ## What is AWS?
 
-Amazon Web Services (AWS)[^1] is a cloud computing[^2] platform provided by Amazon, offering a wide range of services to individuals, organizations, and governments. It is a comprehensive, secure, and scalable platform that enables customers to build, deploy, and manage applications and services with ease and flexibility.
+Amazon Web Services (AWS) is a cloud computing platform provided by Amazon, offering a wide range of services to individuals, organizations, and governments. It is a comprehensive, secure, and scalable platform that enables customers to build, deploy, and manage applications and services with ease and flexibility.
 
 ## AWS Services
 
@@ -72,6 +72,6 @@ In addition, AWS provides a wealth of resources to help customers learn about AW
 ## Reference Links
 
 [^1]: [AWS Homepage](https://aws.amazon.com/)
-[^2]: [Day 2- What is Cloud Computing](D2-Introduction-to-Cloud-Computing.md)
+
 
 

@@ -325,3 +325,4 @@ x | Total | 100% |  65 |
 - [Tutorails Dojo](https://tutorialsdojo.com/aws-certified-solutions-architect-associate-saa-c03/)
 - [AWS Webinars](https://pages.awscloud.com/traincert-twitch-power-hour-architecting.html)
 - [Topics mindmap](mindmap.md)
+- [Topic Details](topic-details.md)
