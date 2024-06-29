@@ -15,16 +15,16 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>AWS Learning by doing</title>
+        <title>07 elastic ip lab - AWS Learning by doing</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#aws-hands-on-learning" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -78,7 +73,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="AWS Learning by doing" class="md-header__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
+    <a href="../.." title="AWS Learning by doing" class="md-header__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -98,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              07 elastic ip lab
             
           </span>
         </div>
@@ -185,7 +180,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="AWS Learning by doing" class="md-nav__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
+    <a href="../.." title="AWS Learning by doing" class="md-nav__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -212,30 +207,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,149 +219,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#chapters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chapters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Chapters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-01-introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section 01 - Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Section 01 - Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Labs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-02-ec2-instances" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section 02 - EC2 instances
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Section 02 - EC2 instances">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labs_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Labs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-03-s3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section 03 - S3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Section 03 - S3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labs_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Labs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certifications
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -428,139 +260,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#chapters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Chapters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Chapters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-01-introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section 01 - Introduction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Section 01 - Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Labs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-02-ec2-instances" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section 02 - EC2 instances
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Section 02 - EC2 instances">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labs_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Labs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-03-s3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section 03 - S3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Section 03 - S3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notes_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#labs_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Labs
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#certifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Certifications
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -578,56 +277,9 @@
   
 
 
-<h1 id="aws-hands-on-learning">AWS -hands on learning</h1>
-<p>Hands on approach for learning AWS</p>
-<h2 id="chapters">Chapters</h2>
-<p>The chapters are sorted in various sections</p>
-<h3 id="section-01-introduction">Section 01 -  Introduction</h3>
-<h4 id="notes">Notes</h4>
-<ol>
-<li><a href="notes/01_introduction/Introduction-to-AWS/">Introduction to AWS</a></li>
-<li><a href="notes/01_introduction/Introduction-to-Virtualization/">Introduction to Virtualization</a></li>
-<li><a href="notes/01_introduction/Introduction-to-Cloud-Computing/">Introduction to Cloud Computing</a></li>
-</ol>
-<h4 id="labs">Labs</h4>
-<ol>
-<li><a href="labs/01-iam-mfa-lab/">Lab 01 - Adding MFA to the account</a></li>
-<li><a href="labs/02-iam-user-lab/">Lab 02 - Create an IAM user</a></li>
-<li><a href="labs/03-budget-lab/">Lab 03 - Adding budget alets</a> </li>
-</ol>
-<h3 id="section-02-ec2-instances">Section 02 - EC2 instances</h3>
-<h4 id="notes_1">Notes</h4>
-<ol>
-<li><a href="notes/02_EC2/01-Introduction-to-EC2/">Introduction to EC2</a></li>
-</ol>
-<h4 id="labs_1">Labs</h4>
-<ol>
-<li><a href="labs/04-ec2-lab/">Lab 04 - Create an EC2 instance</a></li>
-<li><a href="labs/05-public-ip-lab/">Lab 05 - What happens to public IP when you restart an instance</a></li>
-<li><a href="labs/06-userscript-lab/">Lab 06 - Launching an instance with userscript</a></li>
-<li><a href="labs/07-elastic-ip-lab/">Lab 07 - Attaching an Elastic IP</a></li>
-<li><a href="labs/08-ebs-lab/">Lab 08 - Attaching an EBS volume</a></li>
-<li><a href="labs/09-restore-lab/">Lab 09 - Restoring an EBS volume</a></li>
-<li><a href="labs/10-bursting-lab/">Lab 10 - Understanding bursting nature</a></li>
-<li><a href="labs/11-static-website-lab/">Lab 11 - Creating a static website</a>)</li>
-<li><a href="labs/12-cleanup-lab/">Lab 12 - Cleaning up all resources</a></li>
-</ol>
-<h3 id="section-03-s3">Section 03 - S3</h3>
-<h4 id="notes_2">Notes</h4>
-<ol>
-<li><a href="notes/02_EC2/01-Introduction-to-s3/">Introduction to S3</a></li>
-</ol>
-<h4 id="labs_2">Labs</h4>
-<ol>
-<li><a href="labs/13-s3-lab/">Lab 13 - Create an S3 bucket</a></li>
-<li><a href="labs/14-s3-upload-lab/">Lab 14 - Uploading and Downloading files to S3</a></li>
-<li><a href="labs/15-s3-versioning-lab/">Lab 15 - Versioning in S3 Buckets</a></li>
-<li><a href="labs/16-s3-lifecycle-lab/">Lab 16 - Lifecycle policies</a></li>
-</ol>
-<h2 id="certifications">Certifications</h2>
-<ul>
-<li><a href="notes/AWS-Solution-architect-exam/start-here/">AWS Solution Architect Associate exam AWS SAA-03</a></li>
-</ul>
+  <h1>07 elastic ip lab</h1>
+
+
 
 
 
@@ -678,10 +330,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
