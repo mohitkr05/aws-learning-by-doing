@@ -15,16 +15,16 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>AWS Learning by doing</title>
+        <title>Lab for configuring permissions in IAM - AWS Learning by doing</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#lab-for-configuring-permissions-in-iam" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="AWS Learning by doing" class="md-header__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
+    <a href="../../.." title="AWS Learning by doing" class="md-header__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Lab for configuring permissions in IAM
             
           </span>
         </div>
@@ -180,7 +185,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="AWS Learning by doing" class="md-nav__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
+    <a href="../../.." title="AWS Learning by doing" class="md-nav__button md-logo" aria-label="AWS Learning by doing" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -210,7 +215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -260,6 +265,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new User
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new group
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-users-to-the-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Users to the Group
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-mfa-to-the-root-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding MFA to the Root Account
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -271,8 +322,75 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="lab-for-configuring-permissions-in-iam">Lab for configuring permissions in IAM</h1>
+<p>Lab for configuring permissions in IAM, according to AWS best practices.</p>
+<h2 id="adding-a-new-user">Adding a new User</h2>
+<p>In this section, we will create a user with administrator permissions using the AWS Console.</p>
+<ol>
+<li>Access the AWS Dashboard for IAM (https://console.aws.amazon.com/iam/home)</li>
+<li>Click on Users</li>
+<li>Click on Add User</li>
+</ol>
+<p><img alt="alt text" src="../image.png" /></p>
+<ol>
+<li>Define the user name and choose the access type.</li>
+</ol>
+<p>Select Programmatic Access to allow use of the CLI, or AWS Management Console Access to allow login and access through the AWS console. Click on Next: Permissions.</p>
+<p>Image 02</p>
+<ol>
+<li>In the Groups section, we would include this user in a group, but we will address the Groups section in another part of this tutorial.</li>
+<li>Select the "Attach existing policies directly" tab and choose the permission that this user needs. In this tutorial, we will choose AdministratorAccess (in practice, be very careful when using this type of permission). Click on Next: Tags.</li>
+<li>In this section, we can define tags to facilitate management.</li>
+</ol>
+<h2 id="adding-a-new-group">Adding a new group</h2>
+<ol>
+<li>
+<p>To create a group, access the IAM dashboard, click on Groups on the left side of the screen, and then click on Create New Group</p>
+</li>
+<li>
+<p>Define the group name and click on Next Step.</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<ol>
+<li>Choose the permission that will be associated with this group.</li>
+</ol>
+<p>This means that any user that is added to this group will have these permissions. For this tutorial, we will choose the AdministratorAccess permission and click on Next Step.</p>
+<h2 id="adding-users-to-the-group">Adding Users to the Group</h2>
+<ol>
+<li>In the created group, click on Add Users to Group.</li>
+<li>Select the user you would like to add to the group and click on Add Users.</li>
+</ol>
+<h2 id="adding-mfa-to-the-root-account">Adding MFA to the Root Account</h2>
+<ol>
+<li>Access the main screen of the IAM Dashboard, click on Activate MFA on your root account and then click on Manage MFA</li>
+<li>Click on Activate MFA.</li>
+<li>Choose one of the three options:</li>
+</ol>
+<p>The first is to add Virtual MFA, using an application like Google Authenticator or Authy, for example, the second is for physical MFA, and the third is for another type of MFA. For this tutorial, we will use Virtual MFA.</p>
+<p><img alt="alt text" src="../68747470733a2f2f643279626c736d736c647766746f2e636c6f756466726f6e742e6e65742f6c616230312f6c61622d30312d69616d2d30372e706e67.png" /></p>
+<ol>
+<li>Use Google Authenticator or Authy to scan the QR Code and get the code to configure.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -310,10 +428,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
