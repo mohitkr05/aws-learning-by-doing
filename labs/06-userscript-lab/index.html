@@ -279,7 +279,25 @@
 
   <h1>06 userscript lab</h1>
 
+<ol>
+<li>Copy the following in the user script</li>
+</ol>
+<p><img alt="alt text" src="../image-2.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>update<span class="w"> </span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nginx<span class="w">  </span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+</code></pre></div>
 
+<ol>
+<li>Make sure you have HTTP allowed in the security group</li>
+</ol>
+<p><img alt="alt text" src="../image-3.png" /></p>
+<ol>
+<li>Test the connectivity</li>
+</ol>
+<p><img alt="alt text" src="../image-4.png" /></p>
 
 
 
