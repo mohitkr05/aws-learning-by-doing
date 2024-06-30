@@ -20,7 +20,7 @@
     
     
       
-        <title>08 ebs lab - AWS Learning by doing</title>
+        <title>Attaching an EBS instance - AWS Learning by doing</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#attaching-an-ebs-instance" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08 ebs lab
+              Attaching an EBS instance
             
           </span>
         </div>
@@ -260,6 +265,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -277,9 +284,88 @@
   
 
 
-  <h1>08 ebs lab</h1>
+<h1 id="attaching-an-ebs-instance">Attaching an EBS instance</h1>
+<ol>
+<li>
+<p>Create a new EBS volume , by selecting the option from the left menu EBS Volume -&gt; Create EBS Volume (top right)
+<img alt="alt text" src="../image-18.png" /></p>
+</li>
+<li>
+<p>Provide the details such as size, IOPS  and volume type</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../image-17.png" /></p>
+<ol>
+<li>Once the volume is created and in ready state, you can attach it to the instance</li>
+</ol>
+<p><img alt="alt text" src="../image-19.png" /></p>
+<p><img alt="alt text" src="../image-20.png" /></p>
+<ol>
+<li>Click on attach the volume</li>
+</ol>
+<p><img alt="alt text" src="../image-21.png" /></p>
+<ol>
+<li>Attach the volume to the instance</li>
+</ol>
+<p><img alt="alt text" src="../image-22.png" /></p>
+<ol>
+<li>Check the disk status in the instance</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>sudo<span class="w"> </span>fdisk<span class="w"> </span>-l
+Disk<span class="w"> </span>/dev/xvda:<span class="w"> </span><span class="m">8</span><span class="w"> </span>GiB,<span class="w"> </span><span class="m">8589934592</span><span class="w"> </span>bytes,<span class="w"> </span><span class="m">16777216</span><span class="w"> </span>sectors
+Units:<span class="w"> </span>sectors<span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span><span class="nv">512</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Sector<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>logical/physical<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+I/O<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>minimum/optimal<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Disklabel<span class="w"> </span>type:<span class="w"> </span>gpt
+Disk<span class="w"> </span>identifier:<span class="w"> </span>8B1BA8F1-7445-4C33-BE2B-040036A18CCC
+
+Device<span class="w">       </span>Start<span class="w">      </span>End<span class="w">  </span>Sectors<span class="w"> </span>Size<span class="w"> </span>Type
+/dev/xvda1<span class="w">   </span><span class="m">24576</span><span class="w"> </span><span class="m">16777182</span><span class="w"> </span><span class="m">16752607</span><span class="w">   </span>8G<span class="w"> </span>Linux<span class="w"> </span>filesystem
+/dev/xvda127<span class="w"> </span><span class="m">22528</span><span class="w">    </span><span class="m">24575</span><span class="w">     </span><span class="m">2048</span><span class="w">   </span>1M<span class="w"> </span>BIOS<span class="w"> </span>boot
+/dev/xvda128<span class="w">  </span><span class="m">2048</span><span class="w">    </span><span class="m">22527</span><span class="w">    </span><span class="m">20480</span><span class="w">  </span>10M<span class="w"> </span>EFI<span class="w"> </span>System
+
+Partition<span class="w"> </span>table<span class="w"> </span>entries<span class="w"> </span>are<span class="w"> </span>not<span class="w"> </span><span class="k">in</span><span class="w"> </span>disk<span class="w"> </span>order.
 
 
+Disk<span class="w"> </span>/dev/xvdb:<span class="w"> </span><span class="m">10</span><span class="w"> </span>GiB,<span class="w"> </span><span class="m">10737418240</span><span class="w"> </span>bytes,<span class="w"> </span><span class="m">20971520</span><span class="w"> </span>sectors
+Units:<span class="w"> </span>sectors<span class="w"> </span>of<span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span><span class="nv">512</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+Sector<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>logical/physical<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes<span class="w"> </span>/<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+I/O<span class="w"> </span>size<span class="w"> </span><span class="o">(</span>minimum/optimal<span class="o">)</span>:<span class="w"> </span><span class="m">512</span><span class="w"> </span>bytes
+</code></pre></div>
+
+<p>The above print shows the disk <code>/dev/xvdb</code> is attached. we need to format it and mount it</p>
+<ol>
+<li>Format and mount the disk , validate if you can create file in the ebs volume</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/xvdb
+mke2fs<span class="w"> </span><span class="m">1</span>.46.5<span class="w"> </span><span class="o">(</span><span class="m">30</span>-Dec-2021<span class="o">)</span>
+Creating<span class="w"> </span>filesystem<span class="w"> </span>with<span class="w"> </span><span class="m">2621440</span><span class="w"> </span>4k<span class="w"> </span>blocks<span class="w"> </span>and<span class="w"> </span><span class="m">655360</span><span class="w"> </span>inodes
+Filesystem<span class="w"> </span>UUID:<span class="w"> </span>9392d943-5249-4651-8f16-76174e23f9df
+Superblock<span class="w"> </span>backups<span class="w"> </span>stored<span class="w"> </span>on<span class="w"> </span>blocks:
+<span class="w">        </span><span class="m">32768</span>,<span class="w"> </span><span class="m">98304</span>,<span class="w"> </span><span class="m">163840</span>,<span class="w"> </span><span class="m">229376</span>,<span class="w"> </span><span class="m">294912</span>,<span class="w"> </span><span class="m">819200</span>,<span class="w"> </span><span class="m">884736</span>,<span class="w"> </span><span class="m">1605632</span>
+
+Allocating<span class="w"> </span>group<span class="w"> </span>tables:<span class="w"> </span><span class="k">done</span>
+Writing<span class="w"> </span>inode<span class="w"> </span>tables:<span class="w"> </span><span class="k">done</span>
+Creating<span class="w"> </span>journal<span class="w"> </span><span class="o">(</span><span class="m">16384</span><span class="w"> </span>blocks<span class="o">)</span>:<span class="w"> </span><span class="k">done</span>
+Writing<span class="w"> </span>superblocks<span class="w"> </span>and<span class="w"> </span>filesystem<span class="w"> </span>accounting<span class="w"> </span>information:<span class="w"> </span><span class="k">done</span>
+
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/ebs
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>sudo<span class="w"> </span>mount<span class="w"> </span>/dev/xvdb<span class="w"> </span>/mnt/ebs
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span>ls<span class="w"> </span>/mnt/ebs
+lost+found
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>~<span class="o">]</span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/mnt/ebs
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>ebs<span class="o">]</span>$
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>ebs<span class="o">]</span>$<span class="w"> </span>touch<span class="w"> </span>hello-world-ebs-file
+touch:<span class="w"> </span>cannot<span class="w"> </span>touch<span class="w"> </span><span class="s1">&#39;hello-world-ebs-file&#39;</span>:<span class="w"> </span>Permission<span class="w"> </span>denied
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>ebs<span class="o">]</span>$<span class="w"> </span>sudo<span class="w"> </span>touch<span class="w"> </span>hello-world-ebs-file
+<span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>ebs<span class="o">]</span>$<span class="w"> </span>ls<span class="w"> </span>-lrt
+total<span class="w"> </span><span class="m">16</span>
+drwx------.<span class="w"> </span><span class="m">2</span><span class="w"> </span>root<span class="w"> </span>root<span class="w"> </span><span class="m">16384</span><span class="w"> </span>Jun<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">01</span>:14<span class="w"> </span>lost+found
+-rw-r--r--.<span class="w"> </span><span class="m">1</span><span class="w"> </span>root<span class="w"> </span>root<span class="w">     </span><span class="m">0</span><span class="w"> </span>Jun<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="m">01</span>:15<span class="w"> </span>hello-world-ebs-file
+</code></pre></div>
 
 
 

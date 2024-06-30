@@ -20,7 +20,7 @@
     
     
       
-        <title>07 elastic ip lab - AWS Learning by doing</title>
+        <title>Assigning Elastic IP addresses - AWS Learning by doing</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#assigning-elastic-ip-addresses" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              07 elastic ip lab
+              Assigning Elastic IP addresses
             
           </span>
         </div>
@@ -260,6 +265,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -277,9 +284,24 @@
   
 
 
-  <h1>07 elastic ip lab</h1>
+<h1 id="assigning-elastic-ip-addresses">Assigning Elastic IP addresses</h1>
+<ol>
+<li>Click on Allocate Elastic IP address - this will provide you with an Elastic IP address.</li>
+</ol>
+<p><img alt="alt text" src="../image-14.png" /></p>
+<ol>
+<li>Associate elastic IP address</li>
+</ol>
+<p><img alt="alt text" src="../image-15.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="nx">There</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">several</span><span class="w"> </span><span class="nx">ways</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">associate</span><span class="w"> </span><span class="nx">IP</span><span class="w"> </span><span class="nx">address</span><span class="w"> </span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Instance</span><span class="w"> </span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Network</span><span class="w"> </span><span class="nx">Interface</span>
+</code></pre></div>
 
-
+<p>Select instance in this case.</p>
+<ol>
+<li>Reboot the EC2 instance , to validate if the IP address has been disassociated</li>
+</ol>
 
 
 
