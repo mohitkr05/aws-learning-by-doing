@@ -24,3 +24,10 @@
 6. Once the instance is in running state you can ssh into the instance
 
 ![alt text](image-13.png)
+
+
+7. Alternatively, you can connect using the EC2 serial console, but for that you need to allow for this configuration (only available for Nitro system instances)
+
+![alt text](image-16.png)
+ 
+
