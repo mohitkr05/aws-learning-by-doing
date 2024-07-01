@@ -37,7 +37,7 @@ The chapters are sorted in various sections
 5. [Lab 08 - Attaching an EBS volume](labs/08-ebs-lab.md)
 6. [Lab 09 - Restoring an EBS volume](labs/09-restore-lab.md)
 7. [Lab 10 - Understanding bursting nature](labs/10-bursting-lab.md)
-8. [Lab 11 - Creating a static website](labs/11-static-website-lab.md))
+8. [Lab 11 - Creating a static website](labs/11-static-website-lab.md)
 9. [Lab 12 - Cleaning up all resources](labs/12-cleanup-lab.md)
 
 

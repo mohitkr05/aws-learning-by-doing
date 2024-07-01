@@ -4,7 +4,7 @@
 ## Introduction
 - Amazon Elastic Compute Cloud (Amazon EC2) provides on-demand, scalable computing capacity in the Amazon Web Services (AWS) Cloud
 
-![alt text](ec2-instances.png)
+![alt text](../images/ec2-instances.png)
 
 
 
@@ -90,7 +90,7 @@
 
 
 
-![alt text](get-started-diagram.png)
+![alt text](../images/get-started-diagram.png)
 
 
 ### Best practices for Amazon EC2
@@ -108,5 +108,3 @@
 | **Networking** | - Set the time-to-live (TTL) value for applications to 255 (IPv4 & IPv6) to avoid reachability issues. |
 
 
-
-[practice-test](practice-test.md)
