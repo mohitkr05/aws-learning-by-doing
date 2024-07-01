@@ -16,17 +16,17 @@ In this lab, you'll learn how to use SFTP (Secure File Transfer Protocol) to upl
 
 4. Configure the private key in SFTP
 
-![alt text](image-25.png)
+![alt text](images/image-25.png)
 
 5. Configure winscp
 
-![alt text](image-26.png)
+![alt text](images/image-26.png)
 
 6. Upload the files
 
-![alt text](image-27.png)
+![alt text](images/image-27.png)
 
 
 7. Visit the Public DNS 
 
-![alt text](image-28.png)
+![alt text](images/image-28.png)

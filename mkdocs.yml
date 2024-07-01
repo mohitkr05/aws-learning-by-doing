@@ -6,8 +6,10 @@ site_author: "Mohit Kumar"
 site_description: "AWS learning by doing"
 repo_url: "https://github.com/mohitkr05/aws-learning-by-doing"
 
+
 theme:
-  name: material
+    name: journal
+
 
 # extra_css:
 #   - stylesheets/extra.css

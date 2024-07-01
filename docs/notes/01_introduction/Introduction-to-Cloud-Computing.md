@@ -5,7 +5,7 @@
 
 The National Institute of Standards and Technology (NIST) defines cloud computing as:
 
-> "Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models." [^2]
+> "Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models."  
 
 The five essential characteristics of cloud computing according to NIST are:
 
@@ -122,7 +122,3 @@ Cloud computing offers several benefits to users, including:
 20. Scaleway: https://www.scaleway.com/en/
 
 
-## Reference Links
-
-[^1]:[Cloud Computing & Cloud Native Fundamentals](https://www.udemy.com/course/cloud-computing-fundamentals-a-crash-course/)
-[^2]:[NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)

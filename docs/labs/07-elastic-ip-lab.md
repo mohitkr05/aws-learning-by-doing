@@ -2,11 +2,11 @@
 
 1. Click on Allocate Elastic IP address - this will provide you with an Elastic IP address.
 
-![alt text](image-14.png)
+![alt text](images/image-14.png)
 
 2. Associate elastic IP address
 
-![alt text](image-15.png)
+![alt text](images/image-15.png)
 
     - There are several ways you can associate IP address 
         - Instance 

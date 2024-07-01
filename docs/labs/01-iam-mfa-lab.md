@@ -10,7 +10,7 @@ In this section, we will create a user with administrator permissions using the 
 2. Click on Users
 3. Click on Add User
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 4. Define the user name and choose the access type.
 
@@ -28,7 +28,7 @@ Image 02
 
 2. Define the group name and click on Next Step.
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 3. Choose the permission that will be associated with this group.
 
@@ -49,6 +49,6 @@ This means that any user that is added to this group will have these permissions
 
 The first is to add Virtual MFA, using an application like Google Authenticator or Authy, for example, the second is for physical MFA, and the third is for another type of MFA. For this tutorial, we will use Virtual MFA.
 
-![alt text](mfa.png)
+![alt text](images/mfa.png)
 
 4. Use Google Authenticator or Authy to scan the QR Code and get the code to configure.

@@ -2,25 +2,25 @@
 
 
 1. Create a new EBS volume , by selecting the option from the left menu EBS Volume -> Create EBS Volume (top right)
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 
 2. Provide the details such as size, IOPS  and volume type
 
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 3. Once the volume is created and in ready state, you can attach it to the instance
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
-![alt text](image-20.png)
+![alt text](images/image-20.png)
 
 4. Click on attach the volume
 
-![alt text](image-21.png)
+![alt text](images/image-21.png)
 
 5. Attach the volume to the instance
 
-![alt text](image-22.png)
+![alt text](images/image-22.png)
 
 6. Check the disk status in the instance
 
