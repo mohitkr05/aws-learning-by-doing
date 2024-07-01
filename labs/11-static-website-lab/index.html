@@ -20,7 +20,7 @@
     
     
       
-        <title>11 static website lab - AWS Learning by doing</title>
+        <title>Static website lab - AWS Learning by doing</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#static-website-lab" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11 static website lab
+              Static website lab
             
           </span>
         </div>
@@ -260,6 +265,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -277,9 +284,38 @@
   
 
 
-  <h1>11 static website lab</h1>
+<h1 id="static-website-lab">Static website lab</h1>
+<p>In this lab, you'll learn how to use SFTP (Secure File Transfer Protocol) to upload a static website to an EC2 instance. SFTP is a secure way to transfer files between a local machine and a remote server.</p>
+<ol>
+<li>
+<p>Download and install winscp or you can also use scp copy command to upload the files.</p>
+</li>
+<li>
+<p>Files are located at path "docs\labs\static-html-used-car"</p>
+</li>
+<li>
+<p>Upload the files to the EC2 instance using SFTP at the path "/usr/share/nginx/html". Make sure that the path has required permissions</p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span>ec2-user@ip-172-31-1-185<span class="w"> </span>nginx<span class="o">]</span>$<span class="w"> </span>sudo<span class="w"> </span>chown<span class="w"> </span>ec2-user:ec2-user<span class="w"> </span>html
+</code></pre></div>
 
-
+<ol>
+<li>Configure the private key in SFTP</li>
+</ol>
+<p><img alt="alt text" src="image-25.png" /></p>
+<ol>
+<li>Configure winscp</li>
+</ol>
+<p><img alt="alt text" src="image-26.png" /></p>
+<ol>
+<li>Upload the files</li>
+</ol>
+<p><img alt="alt text" src="image-27.png" /></p>
+<ol>
+<li>Visit the Public DNS </li>
+</ol>
+<p><img alt="alt text" src="image-28.png" /></p>
 
 
 
