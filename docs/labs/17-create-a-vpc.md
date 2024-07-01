@@ -45,12 +45,12 @@ This means that the subnets would be /20 subnets.
 
 2. Create a VPC using the VPC workflow
 
-![alt text](image-33.png)
+![alt text](images/image-33.png)
 
 3. Once all the details are provided the VPC will be created
 
-![alt text](image-34.png)
+![alt text](images/image-34.png)
 
 4. View the created VPC
 
-![alt text](image-35.png)
+![alt text](images/image-35.png)
