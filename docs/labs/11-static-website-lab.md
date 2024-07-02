@@ -4,7 +4,7 @@ In this lab, you'll learn how to use SFTP (Secure File Transfer Protocol) to upl
 
 1. Download and install winscp or you can also use scp copy command to upload the files.
 
-2. Files are located at path "docs\labs\static-html-used-car"
+2. Files are located at path "docs\labs\static-html-used-car". Download it from [here](labs/static-html-used-car/static-website.zip)
 
 3. Upload the files to the EC2 instance using SFTP at the path "/usr/share/nginx/html". Make sure that the path has required permissions
 
