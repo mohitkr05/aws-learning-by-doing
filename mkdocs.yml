@@ -8,7 +8,7 @@ repo_url: "https://github.com/mohitkr05/aws-learning-by-doing"
 
 
 theme:
-    name: journal
+    name: lumen
 
 
 # extra_css:
