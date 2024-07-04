@@ -8,14 +8,14 @@
         <meta name="author" content="Mohit Kumar">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>16 s3 lifecycle lab - AWS Learning by doing</title>
+        <title>Create a new VPC - AWS Learning by doing</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
         <link href="../../css/solid.min.css" rel="stylesheet">
         <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-forest-light.min.css" >
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/mohitkr05/aws-learning-by-doing/edit/master/docs/labs/16-s3-lifecycle-lab.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/mohitkr05/aws-learning-by-doing/edit/master/docs/labs/16-create-a-vpc.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -68,12 +68,185 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#create-a-new-vpc" class="nav-link">Create a new VPC</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="create-a-new-vpc">Create a new VPC</h1>
+<ol>
+<li>Subnetting </li>
+</ol>
+<p>Decide the subnets that you are going to use to create a VPC 
+I prefer to use this excellent <a href="https://www.davidc.net/sites/default/subnets/subnets.html">tool </a> to visualize my subnets. I am going to use the subnet <code>10.1.0.0/16</code> for my VPC .</p>
+<p>I have created the following subnets</p>
+<table>
+<thead>
+<tr>
+<th>Subnet address</th>
+<th>Range of addresses</th>
+<th>Useable IPs</th>
+<th>Hosts</th>
+<th>Remarks</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.1.0.0/20</td>
+<td>10.1.0.0 - 10.1.15.255</td>
+<td>10.1.0.1 - 10.1.15.254</td>
+<td>4094</td>
+<td>Public Subnet - AZ A</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.16.0/20</td>
+<td>10.1.16.0 - 10.1.31.255</td>
+<td>10.1.16.1 - 10.1.31.254</td>
+<td>4094</td>
+<td>Public Subnet - AZ B</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.32.0/20</td>
+<td>10.1.32.0 - 10.1.47.255</td>
+<td>10.1.32.1 - 10.1.47.254</td>
+<td>4094</td>
+<td>Public Subnet - AZ C</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.48.0/20</td>
+<td>10.1.48.0 - 10.1.63.255</td>
+<td>10.1.48.1 - 10.1.63.254</td>
+<td>4094</td>
+<td>Private Subnet - AZ A</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.64.0/20</td>
+<td>10.1.64.0 - 10.1.79.255</td>
+<td>10.1.64.1 - 10.1.79.254</td>
+<td>4094</td>
+<td>Private Subnet - AZ B</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.80.0/20</td>
+<td>10.1.80.0 - 10.1.95.255</td>
+<td>10.1.80.1 - 10.1.95.254</td>
+<td>4094</td>
+<td>Private Subnet - AZ C</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.96.0/20</td>
+<td>10.1.96.0 - 10.1.111.255</td>
+<td>10.1.96.1 - 10.1.111.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.112.0/20</td>
+<td>10.1.112.0 - 10.1.127.255</td>
+<td>10.1.112.1 - 10.1.127.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.128.0/20</td>
+<td>10.1.128.0 - 10.1.143.255</td>
+<td>10.1.128.1 - 10.1.143.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.144.0/20</td>
+<td>10.1.144.0 - 10.1.159.255</td>
+<td>10.1.144.1 - 10.1.159.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.160.0/20</td>
+<td>10.1.160.0 - 10.1.175.255</td>
+<td>10.1.160.1 - 10.1.175.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.176.0/20</td>
+<td>10.1.176.0 - 10.1.191.255</td>
+<td>10.1.176.1 - 10.1.191.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.192.0/20</td>
+<td>10.1.192.0 - 10.1.207.255</td>
+<td>10.1.192.1 - 10.1.207.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.208.0/20</td>
+<td>10.1.208.0 - 10.1.223.255</td>
+<td>10.1.208.1 - 10.1.223.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.224.0/20</td>
+<td>10.1.224.0 - 10.1.239.255</td>
+<td>10.1.224.1 - 10.1.239.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+<tr>
+<td>10.1.240.0/20</td>
+<td>10.1.240.0 - 10.1.255.255</td>
+<td>10.1.240.1 - 10.1.255.254</td>
+<td>4094</td>
+<td>Future use</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>A subnet is a subdivision of an IP network. It is defined by a network address and a prefix length. The prefix length determines the size of the subnet. For example, a subnet with a prefix length of 24 is a /24 subnet and can have 256 IP addresses available.</p>
+<p>Subnetting is the process of dividing a larger network into smaller subnets. This is done to reduce the number of IP addresses available in a network and to create logical groupings of IP addresses.</p>
+<p>To subnet a network, you need to determine the number of subnets you want to create and the number of hosts you want to allocate to each subnet. The number of subnets is determined by the number of IP addresses you want to allocate to each subnet. The number of hosts you want to allocate to each subnet is determined by the number of devices you want to connect to the network.</p>
+<p>After determining the number of subnets and the number of hosts per subnet, you can use the following formula to calculate the prefix length for each subnet:</p>
+<p>Prefix Length = Network Bits + (Number of Subnets - 1) + (Number of Host Bits - 2)</p>
+<p>For example, if you have a /16 network and you want to create 4 subnets, with 16 IP addresses allocated to each subnet, you would use the following formula:</p>
+<p>Prefix Length = 16 + (4 - 1) + (4 - 2) = 20</p>
+<p>This means that the subnets would be /20 subnets.</p>
+<ol>
+<li>Create a VPC using the VPC workflow</li>
+</ol>
+<p><img alt="alt text" src="../images/image-33.png" /></p>
+<ol>
+<li>Once all the details are provided the VPC will be created</li>
+</ol>
+<p><img alt="alt text" src="../images/image-34.png" /></p>
+<ol>
+<li>View the created VPC</li>
+</ol>
+<p><img alt="alt text" src="../images/image-35.png" /></p></div>
             </div>
         </div>
 

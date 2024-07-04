@@ -8,14 +8,14 @@
         <meta name="author" content="Mohit Kumar">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>13 s3 lab - AWS Learning by doing</title>
+        <title>Lab 03 - Bucket Creation in S3 - AWS Learning by doing</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
         <link href="../../css/solid.min.css" rel="stylesheet">
         <link href="../../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-forest-light.min.css" >
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/color-brewer.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
@@ -68,12 +68,49 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#lab-03-bucket-creation-in-s3" class="nav-link">Lab 03 - Bucket Creation in S3</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-bucket-creation" class="nav-link">1. Bucket Creation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-object-upload" class="nav-link">2. Object Upload</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-access-created-object" class="nav-link">3. Access Created Object</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="lab-03-bucket-creation-in-s3">Lab 03 - Bucket Creation in S3</h1>
+<h2 id="1-bucket-creation">1. Bucket Creation</h2>
+<p>1.1. In the console, search for S3 </p>
+<p>1.2. Click "Create Bucket".</p>
+<p>1.3. Choose a name for the bucket and the region in which it should be located. The bucket name must be unique across all of AWS, not just your account.</p>
+<p>1.4. In the "Configure options" menu, you can configure the bucket's versioning, logs, tags, activity record and encryption. For this lab, we will not make these settings. Click <strong>Next</strong>.</p>
+<p>1.5. The "Define Permissions" menu is where you configure access permissions to the bucket and its objects. By default, public access to the bucket and its objects is blocked and it is highly recommended that you keep it that way. In the "Analysis" menu it is possible to review the settings made in the previous menus.</p>
+<p>1.6. Review the settings and click <strong>Create Bucket</strong>. On the next screen, we will be able to see the created bucket.</p>
+<h2 id="2-object-upload">2. Object Upload</h2>
+<p>2.1. Click the bucket to open and upload files. Click <strong>Upload</strong> to upload objects.</p>
+<p>2.2. Click <strong>Add File</strong> and choose the object or objects you want to upload to the bucket.</p>
+<p>2.3. In the <strong>Define permissions</strong> menu we can configure the access allowed to the object. Keep the default settings and click <strong>Next</strong>.</p>
+<p>2.4. In the <strong>Define Properties</strong> menu, you can choose which S3 class the object will be stored in, as well as encryption and tag settings. Keep it at <em>Standard</em>, which is the default, and click <strong>Next</strong>.</p>
+<p>2.5. In the <strong>Analysis</strong> menu it is possible to review the settings made in the previous menus and confirm the file upload. Click <strong>Upload</strong>.</p>
+<h2 id="3-access-created-object">3. Access Created Object</h2>
+<p>3.1. On the next screen, you can see the file already available in the created bucket. Click on the object.</p>
+<p>3.2. On this screen, you can see information regarding the object and the URL for public access. Copy the URL and paste it into the browser and try to access the object.</p>
+<p>3.3. This is the result of a query for the URL of a private object in the S3 bucket. For this lab, we will leave public access for testing.</p>
+<p>3.4. To allow public access to objects, go back to the bucket page and access the <strong>Permissions</strong> menu. By default, the "Block all public access" checkbox is checked. Uncheck the checkbox and click <strong>Save</strong>. For security, you need to confirm this action. Please note that, according to best practices, all buckets must be private and this lab is for teaching purposes only.</p>
+<p>3.5. After confirmation, select the object again and click <strong>Make Public</strong>.</p>
+<p>3.6. Copy and paste the object access URL into the browser again. As a result you will be able to visualize the object.</p></div>
             </div>
         </div>
 
