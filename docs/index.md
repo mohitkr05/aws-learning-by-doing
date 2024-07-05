@@ -43,6 +43,12 @@ The chapters are sorted in various sections
 | 16 | [Lab 22 - Configuring Auto Scaling policies](labs/22-auto-scaling-policies-lab.md) | Configuring Auto Scaling policies |
 | 17 | [Lab 23 - Configuring Auto Scaling notifications](labs/23-auto-scaling-notifications-lab.md) | Configuring Auto Scaling notifications |
 
+
+### Section 03 - Other Compute solutions
+
+| No. | Note | Description |
+| --- | --- | --- |
+| 1 | [Lab 13 - Amazon Batch](labs/24-aws-batch-lab.md) | AWS Batch |
 ### Section 03 - S3 
 
 | No. | Note | Description |
