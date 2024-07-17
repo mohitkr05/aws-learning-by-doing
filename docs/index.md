@@ -49,6 +49,9 @@ The chapters are sorted in various sections
 | No. | Note | Description |
 | --- | --- | --- |
 | 1 | [Lab 13 - Amazon Batch](labs/24-aws-batch-lab.md) | AWS Batch |
+| 2 | [Lab 14 - AWS BeanStalk](labs/25-aws-beanstalk-lab.md) | AWS Beanstalk |
+
+
 ### Section 03 - S3 
 
 | No. | Note | Description |
