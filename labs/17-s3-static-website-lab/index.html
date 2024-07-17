@@ -82,11 +82,11 @@
 <ol>
 <li>Upload your code in the S3 bucket</li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-1.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-1.png" /></p>
 <ol>
 <li>Go to properties and change the settings to create a static website</li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-2.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-2.png" /></p>
 <ol>
 <li>
 <p>Set up redirection rules if required, for example the following redirection rule  defines how to handle requests and redirect them based on certain conditions.  </p>
@@ -122,18 +122,18 @@
 <ol>
 <li>After this an URL will be generated</li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-3.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-3.png" /></p>
 <ol>
 <li>Now the next step is to enable the Public access.<blockquote>
 <p>Public access is granted to buckets and objects through access control lists (ACLs), bucket policies, access point policies, or all. In order to ensure that public access to all your S3 buckets and objects is blocked, turn on Block all public access. These settings apply only to this bucket and its access points</p>
 </blockquote>
 </li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-4.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-4.png" /></p>
 <ol>
 <li>Create a bucket policy</li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-5.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-5.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Policy1720919040547&quot;</span><span class="p">,</span>
@@ -156,14 +156,14 @@
 <ol>
 <li>Attaching a CloudFront endpoint, create a new CloudFront endpoint</li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-7.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-7.png" /></p>
 <ol>
 <li>Create a new origin access control</li>
 </ol>
-<p><img alt="alt text" src="images\s3-static-web-6.png" /></p>
-<p><img alt="alt text" src="images\s3-static-web-8.png" /></p>
-<p><img alt="alt text" src="images\s3-static-web-9.png" /></p>
-<p><img alt="alt text" src="images\s3-static-web-10.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-6.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-8.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-9.png" /></p>
+<p><img alt="alt text" src="../images/s3-static-web-10.png" /></p>
 <ol>
 <li>Update the policy of the S3 bucket</li>
 </ol>
