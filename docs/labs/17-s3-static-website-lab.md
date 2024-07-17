@@ -2,11 +2,11 @@
 
 1. Upload your code in the S3 bucket
 
-![alt text](images\s3-static-web-1.png)
+![alt text](images/s3-static-web-1.png)
 
 2. Go to properties and change the settings to create a static website
 
-![alt text](images\s3-static-web-2.png)
+![alt text](images/s3-static-web-2.png)
 
 3. Set up redirection rules if required, for example the following redirection rule  defines how to handle requests and redirect them based on certain conditions.  
 
@@ -39,17 +39,17 @@ Would you like me to explain any part of this in more detail?
 3. After this an URL will be generated
 
 
-![alt text](images\s3-static-web-3.png)
+![alt text](images/s3-static-web-3.png)
 
 4. Now the next step is to enable the Public access.
 > Public access is granted to buckets and objects through access control lists (ACLs), bucket policies, access point policies, or all. In order to ensure that public access to all your S3 buckets and objects is blocked, turn on Block all public access. These settings apply only to this bucket and its access points
 
 
-![alt text](images\s3-static-web-4.png)
+![alt text](images/s3-static-web-4.png)
 
 5. Create a bucket policy
 
-![alt text](images\s3-static-web-5.png)
+![alt text](images/s3-static-web-5.png)
 ```json
 {
     "Version": "2012-10-17",
@@ -75,22 +75,22 @@ However, this is not a better use case as we have to allow access to the S3 buck
 
 7. Attaching a CloudFront endpoint, create a new CloudFront endpoint
 
-![alt text](images\s3-static-web-7.png)
+![alt text](images/s3-static-web-7.png)
 
 
 
 8. Create a new origin access control
 
-![alt text](images\s3-static-web-6.png)
+![alt text](images/s3-static-web-6.png)
 
-![alt text](images\s3-static-web-8.png)
-
-
-![alt text](images\s3-static-web-9.png)
+![alt text](images/s3-static-web-8.png)
 
 
+![alt text](images/s3-static-web-9.png)
 
-![alt text](images\s3-static-web-10.png)
+
+
+![alt text](images/s3-static-web-10.png)
 
 
 9. Update the policy of the S3 bucket
