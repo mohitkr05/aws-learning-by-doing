@@ -2,11 +2,7 @@
 
 Hands on approach for learning AWS
 
-## Chapters
-
-The chapters are sorted in various sections
-
-### Section 01 -  Introduction
+## Section 01 -  Introduction
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -17,9 +13,7 @@ The chapters are sorted in various sections
 | 5 | [Lab 02 - Create an IAM user](labs/02-iam-user-lab.md) | Create an IAM user |
 | 6 | [Lab 03 - Adding budget alets](labs/03-budget-lab.md) | Adding budget alerts |
 
-
-
-### Section 02 - EC2 instances
+## Section 02 - EC2 instances
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -34,7 +28,7 @@ The chapters are sorted in various sections
 | 9 | [Lab 11 - Creating a static website](labs/11-static-website-lab.md) | Creating a static website |
 | 10 | [Lab 12 - Understanding placement groups](labs/12-placement-groups.md) | Cleaning up all resources |
 | 11 | [ Lab 13 - Creating a launch template](labs/13-launch-template.md)| Creating a launch template |
-| 12 | [ Lab 14 - Creating Spot instance fleet](labs/14-spot-instance-fleet)| Creating Spot instance fleet |
+| 12 | [ Lab 14 - Creating Spot instance fleet](labs/14-spot-instance-fleet.md)| Creating Spot instance fleet |
 | 11 | [Lab 17 - Creating a Classic Load Balancer](labs/17-classic-load-balancer-lab.md) | Creating a Classic Load Balancer |
 | 12 | [Lab 18 - Creating an Application Load Balancer](labs/18-application-load-balancer-lab.md) | Creating an Application Load Balancer |
 | 13 | [Lab 19 - Creating an Application Load Balancer with HTTPS](labs/19-application-load-balancer-https-lab.md) | Creating an Application Load Balancer with HTTPS |
@@ -43,8 +37,7 @@ The chapters are sorted in various sections
 | 16 | [Lab 22 - Configuring Auto Scaling policies](labs/22-auto-scaling-policies-lab.md) | Configuring Auto Scaling policies |
 | 17 | [Lab 23 - Configuring Auto Scaling notifications](labs/23-auto-scaling-notifications-lab.md) | Configuring Auto Scaling notifications |
 
-
-### Section 03 - Other Compute solutions
+## Section 03 - Other Compute solutions
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -52,7 +45,7 @@ The chapters are sorted in various sections
 | 2 | [Lab 14 - AWS BeanStalk](labs/25-aws-beanstalk-lab.md) | AWS Beanstalk |
 
 
-### Section 03 - S3 
+## Section 03 - S3 
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -63,7 +56,8 @@ The chapters are sorted in various sections
 | 5 | [Lab 17 - Setting up Static Website Hosting](labs/17-s3-static-website-lab.md) | Setting up Static Website Hosting |
 | 6 | [Lab 18 - Implementing Object Locking](labs/18-s3-object-locking-lab.md) | Implementing Object Locking |
 
-### Section 04 - Networking
+
+## Section 04 - Networking
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -86,7 +80,7 @@ The chapters are sorted in various sections
 | 17 | [Lab 35 - Client VPN](labs/32-client-vpn.md) | Client VPN |
 | 18 | [Lab 36 - Network Access Control Lists](labs/33-network-access-control-lists.md) | Network Access Control Lists |
 
-### Section 04 - IAM
+## Section 05 - IAM
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -97,8 +91,7 @@ The chapters are sorted in various sections
 | 5 | [Lab 41 - IAM Auditing and Compliance](labs/38-iam-auditing-and-compliance.md) | IAM Auditing and Compliance |
 | 6 | [Lab 42 - IAM Security Best Practices](labs/39-iam-security-best-practices.md) | IAM Security Best Practices |
 
-
-### Section 05 - RDS
+## Section 06 - RDS
 
 | No. | Note | Description |
 | --- | --- | --- |
@@ -111,39 +104,9 @@ The chapters are sorted in various sections
 | 7 | [Lab 49 - Amazon RDS Monitoring and Logging](labs/46-amazon-rds-monitoring-and-logging.md) | Amazon RDS Monitoring and Logging |
 | 8 | [Lab 50 - Amazon RDS Encryption](labs/47-amazon-rds-encryption.md) | Amazon RDS Encryption |
 
-### Section 06 - Serverless
+
+## Section 07 - Serverless
 
 | No. | Note | Description |
 | --- | --- | --- |
 | 1 | [Lab 51 - AWS Lambda](labs/50-aws-lambda.md) | AWS Lambda |
-| 2 | [Lab 52 - AWS Lambda with S3 Event Trigger](labs/50-aws-lambda-with-s3-event-trigger.md) | AWS Lambda with S3 Event Trigger |
-| 3 | [Lab 53 - AWS Lambda with API Gateway](labs/50-aws-lambda-with-api-gateway.md) | AWS Lambda with API Gateway |
-| 4 | [Lab 54 - AWS Lambda with CloudWatch Events](labs/50-aws-lambda-with-cloudwatch-events.md) | AWS Lambda with CloudWatch Events |
-| 5 | [Lab 55 - Amazon DynamoDB](labs/51-amazon-dynamodb.md) | Amazon DynamoDB |
-| 6 | [Lab 56 - DynamoDB - Basic CRUD Operations](labs/51-dynamodb-basic-crud-operations.md) | DynamoDB - Basic CRUD Operations |
-| 7 | [Lab 57 - DynamoDB - Query and Scan Operations](labs/51-dynamodb-query-and-scan-operations.md) | DynamoDB - Query and Scan Operations |
-| 8 | [Lab 58 - DynamoDB - Indexes and GSI](labs/51-dynamodb-indexes-and-gsi.md) | DynamoDB - Indexes and GSI |
-| 9 | [Lab 59 - Amazon SQS](labs/52-amazon-sqs.md) | Amazon SQS |
-| 10 | [Lab 60 - SQS - Standard Queue](labs/52-sqs-standard-queue.md) | SQS - Standard Queue |
-| 11 | [Lab 61 - SQS - FIFO Queue](labs/52-sqs-fifo-queue.md) | SQS - FIFO Queue |
-| 12 | [Lab 62 - SQS - Message Visibility Timeout](labs/52-sqs-message-visibility-timeout.md) | SQS - Message Visibility Timeout |
-| 13 | [Lab 63 - Amazon SNS](labs/53-amazon-sns.md) | Amazon SNS |
-| 14 | [Lab 64 - SNS - Publish/Subscribe Model](labs/53-sns-publish-subscribe-model.md) | SNS - Publish/Subscribe Model |
-| 15 | [Lab 65 - SNS - Topic and Subscription](labs/53-sns-topic-and-subscription.md) | SNS - Topic and Subscription |
-| 16 | [Lab 66 - SNS - SMS and Email Subscriptions](labs/53-sns-sms-and-email-subscriptions.md) | SNS - SMS and Email Subscriptions |
-| 17 | [Lab 67 - AWS Batch](labs/54-aws-batch.md) | AWS Batch |
-| 18 | [Lab 68 - Batch - Job Definition and Job Queue](labs/54-batch-job-definition-and-job-queue.md) | Batch - Job Definition and Job Queue |
-| 19 | [Lab 69 - Batch - Job Submission and Monitoring](labs/54-batch-job-submission-and-monitoring.md) | Batch - Job Submission and Monitoring |
-| 20 | [Lab 70 - Batch - Compute Environment and Job Dependency](labs/54-batch-compute-environment-and-job-dependency.md) | Batch - Compute Environment and Job Dependency |
-| 21 | [Lab 56 - AWS Glue](labs/55-aws-glue.md) | AWS Glue |
-| 22 | [Lab 56A - Glue - Data Catalog and Jobs](labs/55-glue-data-catalog-and-jobs.md) | Glue - Data Catalog and Jobs |
-| 23 | [Lab 56B - Glue - ETL Job and Crawler](labs/55-glue-etl-job-and-crawler.md) | Glue - ETL Job and Crawler |
-| 24 | [Lab 56C - Glue - Data Quality and Job Bookmarks](labs/55-glue-data-quality-and-job-bookmarks.md) | Glue - Data Quality and Job Bookmarks |
-| 25 | [Lab 57 - AWS Step Functions](labs/56-aws-step-functions.md) | AWS Step Functions |
-| 26 | [Lab 57A - Step Functions - Simple Workflow](labs/56-step-functions-simple-workflow.md) | Step Functions - Simple Workflow |
-| 27 | [Lab 57B - Step Functions - Parallel Execution](labs/56-step-functions-parallel-execution.md) | Step Functions - Parallel Execution |
-| 28 | [Lab 57C - Step Functions - Error Handling and Retry](labs/56-step-functions-error-handling-and-retry.md) | Step Functions - Error Handling and Retry |
-
-## Certifications
-
-- [AWS Solution Architect Associate exam AWS SAA-03](notes/AWS-Solution-architect-exam/start-here.md)
