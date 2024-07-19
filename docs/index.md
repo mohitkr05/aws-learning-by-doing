@@ -110,3 +110,11 @@ Hands on approach for learning AWS
 | No. | Note | Description |
 | --- | --- | --- |
 | 1 | [Lab 51 - AWS Lambda](labs/50-aws-lambda.md) | AWS Lambda |
+| 2 | [Lab 52 - AWS Serverless](labs/51-aws-serverless.md) | AWS Serverless |
+
+
+## Section 08 - Containers
+
+| No. | Note | Description |
+| --- | --- | --- |
+| 1 | [Lab 53 - AWS Fargate](labs/52-aws-fargate.md) | AWS Fargate |
