@@ -1,0 +1,121 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'ECS Service with Load Balancer'
+
+Resources:
+  # Security group for ALB
+  LoadBalancerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: Allow HTTP traffic
+      VpcId: vpc-0b2ce08bc9c7b00ea
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+
+  # Security group for ECS tasks
+  ECSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: Allow ECS tasks to communicate
+      VpcId: vpc-0b2ce08bc9c7b00ea
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          SourceSecurityGroupId: !Ref LoadBalancerSecurityGroup
+
+  # Define the load balancer
+  LoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: my-load-balancer
+      Subnets:
+        - subnet-044f194cb25d781d3
+        - subnet-0b5bf1b733ad15849
+      SecurityGroups:
+        - !Ref LoadBalancerSecurityGroup
+      Scheme: internet-facing
+      LoadBalancerAttributes:
+        - Key: idle_timeout.timeout_seconds
+          Value: '60'
+
+  # Define the target group
+  TargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: my-target-group
+      VpcId: vpc-0b2ce08bc9c7b00ea
+      Protocol: HTTP
+      Port: 80
+      TargetType: ip
+      HealthCheckProtocol: HTTP
+      HealthCheckPort: '80'
+      HealthCheckPath: /
+      HealthCheckIntervalSeconds: 30
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 5
+      UnhealthyThresholdCount: 2
+
+  # Define the load balancer listener
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref TargetGroup
+      LoadBalancerArn: !Ref LoadBalancer
+      Port: 80
+      Protocol: HTTP
+
+  # Define the ECS task execution role
+  ExecutionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: 'Allow'
+            Principal:
+              Service: 'ecs-tasks.amazonaws.com'
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: 'ExecutionRolePolicy'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: 'Allow'
+                Action:
+                  - 'ecr:GetAuthorizationToken'
+                  - 'ecr:BatchGetImage'
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource: '*'
+
+  # Define the ECS service
+  ECSService:
+    Type: 'AWS::ECS::Service'
+    Properties:
+      ServiceName: httpd-service
+      Cluster: DevECSCluster
+      TaskDefinition: arn:aws:ecs:ap-south-1:652897695890:task-definition/hello-world-task:1
+      LaunchType: 'FARGATE'
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          Subnets:
+            - subnet-044f194cb25d781d3
+            - subnet-0b5bf1b733ad15849
+          SecurityGroups:
+            - !Ref ECSSecurityGroup
+          AssignPublicIp: 'ENABLED'
+      LoadBalancers:
+        - TargetGroupArn: !Ref TargetGroup
+          ContainerName: sample-fargate-app
+          ContainerPort: 80
+
+Outputs:
+  LoadBalancerDNSName:
+    Description: "DNS Name of the load balancer"
+    Value: !GetAtt LoadBalancer.DNSName

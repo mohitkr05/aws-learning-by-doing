@@ -118,3 +118,4 @@ Hands on approach for learning AWS
 | No. | Note | Description |
 | --- | --- | --- |
 | 1 | [Lab 53 - AWS Fargate](labs/52-aws-fargate.md) | AWS Fargate |
+| 2 | [Lab 54 - AWS EKS](labs/53-ecs-load-balancer.md) | AWS ECS with Load Balancer |
