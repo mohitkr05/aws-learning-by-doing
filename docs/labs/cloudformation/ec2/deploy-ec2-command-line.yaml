@@ -1,0 +1,64 @@
+To deploy an EC2 instance using the AWS CLI, follow these steps:
+
+### Prerequisites:
+1. **Install AWS CLI**: Ensure that you have the AWS CLI installed. If not, you can install it from [here](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+   
+2. **Configure AWS CLI**: Set up your AWS credentials using the command below:
+   ```bash
+   aws configure
+   ```
+   Provide your:
+   - AWS Access Key ID
+   - AWS Secret Access Key
+   - Default region name (e.g., `us-east-1`)
+   - Default output format (e.g., `json`)
+
+### Step-by-Step Guide to Launch an EC2 Instance:
+
+#### 1. **Choose an Amazon Machine Image (AMI):**
+   Run the following command to list the available AMIs in your region:
+   ```bash
+   aws ec2 describe-images --owners amazon --filters "Name=description,Values=Amazon Linux 2*" --query 'Images[*].[ImageId,Description]' --output table
+   ```
+   Take note of the Image ID (`ami-xxxxxxxx`), as you’ll need it to launch the instance.
+
+#### 2. **Choose an EC2 Instance Type:**
+   Example: `t2.micro` is a commonly used type eligible for the free tier.
+
+#### 3. **Create a Key Pair (if not already created):**
+   If you don’t have an existing key pair, create one:
+   ```bash
+   aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+   ```
+   Ensure the key pair file is secure:
+   ```bash
+   chmod 400 MyKeyPair.pem
+   ```
+
+#### 4. **Launch the EC2 Instance:**
+   Now, run the following command to launch your instance. Replace the placeholders with the appropriate values:
+   ```bash
+   aws ec2 run-instances \
+   --image-id ami-xxxxxxxx \  # Your AMI ID
+   --instance-type t2.micro \
+   --key-name MyKeyPair \  # Your Key Pair Name
+   --security-group-ids sg-xxxxxxxx \  # A security group ID allowing SSH access (port 22)
+   --subnet-id subnet-xxxxxxxx \  # A subnet ID in your preferred VPC
+   --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyEC2Instance}]' \
+   --count 1
+   ```
+
+#### 5. **Get the Instance Details:**
+   Once the instance is created, you can view its details, such as the public DNS, using the command:
+   ```bash
+   aws ec2 describe-instances --instance-ids i-xxxxxxxx
+   ```
+   Replace `i-xxxxxxxx` with your instance ID.
+
+#### 6. **SSH into Your Instance:**
+   To access the EC2 instance, run the following command (replace `your-ec2-public-dns` with the actual DNS name of your EC2 instance):
+   ```bash
+   ssh -i "MyKeyPair.pem" ec2-user@your-ec2-public-dns
+   ```
+
+That’s it! You’ve successfully deployed an EC2 instance using the AWS CLI. Let me know if you'd like help with any specific parts of this.

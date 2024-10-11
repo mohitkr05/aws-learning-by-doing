@@ -1,0 +1,574 @@
+---
+marp: true
+---
+
+# Amazon AppFlow
+## Securely automate data flows between AWS and SaaS applications
+
+---
+
+## What is Amazon AppFlow?
+- Fully managed integration service
+- Automates data flows between AWS services and SaaS applications
+- Ensures data security and privacy
+
+---
+
+## Key Features
+- **Data Transformation**: Filter, map, and mask data
+- **Security**: Data encryption at rest and in transit
+- **Flexibility**: Connects to multiple SaaS providers
+- **Scalability**: Handles large data volumes
+
+---
+
+## Common Use Cases
+- **Data Synchronization**: Sync data between SaaS applications and AWS
+- **Data Ingestion**: Import data from SaaS apps into AWS for analysis
+- **Automated Workflows**: Trigger workflows based on data changes
+
+---
+
+## Integration with AWS Services
+- **Amazon S3**: Store imported data
+- **Amazon Redshift**: Data warehousing
+- **Amazon RDS**: Database storage
+- **Amazon EventBridge**: Event-driven workflows
+
+---
+
+## Pricing
+- **Pay-as-you-go**: Based on the number of flows and data processed
+- **Free Tier**: Limited usage for testing and small projects
+
+---
+
+## Summary
+- Amazon AppFlow simplifies and secures data transfers between AWS and SaaS
+- Ideal for integrating, synchronizing, and analyzing data across platforms
+
+
+---
+
+# AWS AppSync
+## Scalable GraphQL APIs for application data
+
+---
+
+## What is AWS AppSync?
+- Managed service for building GraphQL APIs
+- Simplifies data access and synchronization across applications and devices
+
+---
+
+## Key Features
+- **Real-time Data**: Subscriptions for real-time updates
+- **Offline Sync**: Data synchronization for offline use
+- **Security**: Integrated with AWS IAM, Cognito, and more
+- **Scalability**: Auto-scaling capabilities
+
+---
+
+## Common Use Cases
+- **Mobile and Web Apps**: Synchronize data in real-time
+- **Microservices**: Simplify data fetching and aggregation
+- **IoT Applications**: Real-time data updates and synchronization
+
+---
+
+## Integration with AWS Services
+- **DynamoDB**: NoSQL database for fast, flexible data storage
+- **Lambda**: Serverless computing for backend logic
+- **Aurora**: Managed relational database service
+- **Elasticsearch**: Full-text search and analytics
+
+---
+
+## Pricing
+- **Request-based Pricing**: Charges based on the number of queries and mutations
+- **Free Tier**: Limited usage for experimentation
+
+---
+
+## Summary
+- AWS AppSync enables efficient and scalable GraphQL APIs
+- Ideal for real-time data synchronization and flexible data querying
+
+
+---
+
+# Amazon MQ
+## Managed message broker service for Apache ActiveMQ and RabbitMQ
+
+---
+
+## What is Amazon MQ?
+- Managed message broker service
+- Supports Apache ActiveMQ and RabbitMQ
+- Facilitates communication between distributed applications
+
+---
+
+## Key Features
+- **Compatibility**: Works with existing message brokers
+- **High Availability**: Automatic failover and recovery
+- **Security**: VPC, IAM, and encryption support
+- **Scalability**: Easily scales to meet demand
+
+---
+
+## Common Use Cases
+- **Message Queuing**: Decouple and scale microservices
+- **Event-Driven Architectures**: Reliable message delivery
+- **Legacy System Integration**: Connect older systems with modern apps
+
+---
+
+## Integration with AWS Services
+- **EC2**: Compute resources for applications
+- **Lambda**: Serverless functions to process messages
+- **S3**: Store processed data
+- **RDS**: Relational database for storing application state
+
+---
+
+## Pricing
+- **Instance-Based**: Charges based on instance type and storage
+- **Free Tier**: Limited usage for testing and development
+
+---
+
+## Summary
+- Amazon MQ provides a reliable, managed message broker service
+- Ideal for integrating and scaling distributed applications
+
+
+---
+
+# Amazon Simple Notification Service (Amazon SNS)
+## Fully managed pub/sub messaging and mobile notifications
+
+---
+
+## What is Amazon SNS?
+- Fully managed pub/sub messaging service
+- Enables communication between distributed systems and microservices
+
+---
+
+## Key Features
+- **Topic-Based Messaging**: Publish messages to topics
+- **Multiple Protocols**: HTTP/S, email, SMS, and more
+- **Message Filtering**: Subscribe only to relevant messages
+- **Security**: IAM policies and encryption support
+
+---
+
+## Common Use Cases
+- **Event Notifications**: Notify users or systems of events
+- **Decoupled Architectures**: Enable loose coupling between components
+- **Mobile Push Notifications**: Send messages to mobile devices
+
+---
+
+## Integration with AWS Services
+- **Lambda**: Process messages with serverless functions
+- **SQS**: Queue messages for processing
+- **CloudWatch**: Monitor and trigger alerts
+- **Step Functions**: Orchestrate workflows
+
+---
+
+## Pricing
+- **Pay-as-you-go**: Based on the number of requests and messages
+- **Free Tier**: Limited number of requests and messages
+
+---
+
+## Summary
+- Amazon SNS simplifies pub/sub messaging and notifications
+- Ideal for building event-driven and decoupled architectures
+
+
+---
+
+# Amazon Simple Queue Service (Amazon SQS)
+## Fully managed message queuing service
+
+---
+
+## What is Amazon SQS?
+- Fully managed message queuing service
+- Enables decoupling and scaling of microservices, distributed systems, and serverless applications
+
+---
+
+## Key Features
+- **Two Queue Types**: Standard and FIFO queues
+- **Message Retention**: Up to 14 days
+- **Visibility Timeout**: Ensures message processing
+- **Security**: IAM policies and encryption support
+
+---
+
+## Common Use Cases
+- **Decoupling Applications**: Separate components to improve scalability
+- **Task Queues**: Manage and distribute tasks
+- **Message Buffering**: Handle variable message load
+
+---
+
+## Integration with AWS Services
+- **Lambda**: Process messages with serverless functions
+- **EC2**: Compute resources to handle messages
+- **S3**: Store message data
+- **RDS**: Store application state
+
+---
+
+## Pricing
+- **Pay-as-you-go**: Based on the number of requests and data transferred
+- **Free Tier**: Limited number of requests and data transfer
+
+---
+
+## Summary
+- Amazon SQS provides a reliable, scalable message queuing service
+- Ideal for decoupling and scaling distributed systems and applications
+
+
+---
+
+# AWS Step Functions
+## Orchestrate serverless workflows
+
+---
+
+## What is AWS Step Functions?
+- Fully managed service for orchestrating workflows
+- Coordinates multiple AWS services into serverless workflows
+
+---
+
+## Key Features
+- **Visual Workflow**: Define workflows using a visual interface
+- **Error Handling**: Built-in error handling and retry logic
+- **State Management**: Manage state across workflow steps
+- **Security**: IAM integration for secure access
+
+---
+
+## Common Use Cases
+- **Microservices Orchestration**: Coordinate microservices
+- **Data Processing Pipelines**: Automate ETL processes
+- **Event-Driven Workflows**: Trigger workflows based on events
+
+---
+
+## Integration with AWS Services
+- **Lambda**: Serverless functions for task processing
+- **DynamoDB**: State management and data storage
+- **S3**: Store workflow data
+- **SNS**: Send notifications within workflows
+
+---
+
+## Pricing
+- **Pay-as-you-go**: Based on the number of state transitions
+- **Free Tier**: Limited number of state transitions
+
+---
+
+## Summary
+- AWS Step Functions simplifies the orchestration of complex workflows
+- Ideal for automating and managing serverless applications and processes
+
+
+ 
+---
+
+# Amazon DocumentDB (with MongoDB compatibility)
+## Fully managed, scalable, and highly available document database service
+
+---
+
+## What is Amazon DocumentDB?
+- Managed document database service
+- MongoDB-compatible
+- Designed for scalability, performance, and high availability
+
+---
+
+## Key Features
+- **Compatibility**: Supports MongoDB APIs, tools, and drivers
+- **Scalability**: Automatically scales storage and compute
+- **High Availability**: Multi-AZ deployments with automatic failover
+- **Security**: Encryption at rest and in transit, VPC support
+
+---
+
+## Common Use Cases
+- **Content Management**: Manage and query JSON documents
+- **Catalogs**: Store and retrieve product information
+- **Mobile Applications**: Backend for mobile app data storage
+
+---
+
+## Integration with AWS Services
+- **AWS Lambda**: Serverless compute for database operations
+- **Amazon CloudWatch**: Monitoring and logging
+- **AWS Glue**: Data integration and ETL
+- **Amazon S3**: Backup and restore
+
+---
+
+## Pricing
+- **Pay-as-you-go**: Based on instance hours, storage, and I/O
+- **Free Tier**: Limited usage for testing and small projects
+
+---
+
+## Summary
+- Amazon DocumentDB offers a scalable and fully managed MongoDB-compatible database solution
+- Ideal for applications requiring flexible and high-performance document storage
+
+
+---
+
+# Amazon DynamoDB
+## Fully managed NoSQL database service
+
+---
+
+## What is Amazon DynamoDB?
+- Managed NoSQL database service
+- Designed for high performance and scalability
+- Key-value and document data models
+
+---
+
+## Key Features
+- **Performance**: Single-digit millisecond response times
+- **Scalability**: Automatically scales to handle large volumes
+- **High Availability**: Multi-region replication and backups
+- **Security**: Encryption at rest and in transit, IAM integration
+
+---
+
+## Common Use Cases
+- **Real-Time Data Processing**: High-speed data ingestion and retrieval
+- **Gaming**: Leaderboards, session storage
+- **IoT Applications**: Device data storage and management
+
+---
+
+## Integration with AWS Services
+- **AWS Lambda**: Event-driven data processing
+- **Amazon API Gateway**: RESTful APIs for data access
+- **Amazon Kinesis**: Real-time data streaming
+- **Amazon Redshift**: Data warehousing and analytics
+
+---
+
+## Pricing
+- **Pay-per-Request**: Based on read/write capacity units
+- **On-Demand**: Charges based on actual usage
+- **Free Tier**: Limited read/write capacity and storage
+
+---
+
+## Summary
+- Amazon DynamoDB provides a fast and flexible NoSQL database solution
+- Ideal for applications requiring low-latency and high-throughput data access
+
+
+---
+
+# Amazon ElastiCache
+## Managed in-memory caching service
+
+---
+
+## What is Amazon ElastiCache?
+- Fully managed in-memory data store and cache
+- Supports Redis and Memcached
+- Improves application performance by caching data
+
+---
+
+## Key Features
+- **Performance**: Low latency and high throughput
+- **Scalability**: Easily scale in and out
+- **High Availability**: Multi-AZ with automatic failover
+- **Security**: VPC, IAM, and encryption support
+
+---
+
+## Common Use Cases
+- **Caching**: Accelerate database queries and application performance
+- **Session Storage**: Store user session data
+- **Real-Time Analytics**: In-memory data processing and analytics
+
+---
+
+## Integration with AWS Services
+- **Amazon RDS**: Cache database queries
+- **Amazon EC2**: Compute resources for cached data
+- **AWS Lambda**: Serverless functions to access cached data
+- **Amazon CloudWatch**: Monitoring and metrics
+
+---
+
+## Pricing
+- **Instance-Based**: Charges based on instance type and usage
+- **Data Transfer**: Charges for data transferred out of AWS
+
+---
+
+## Summary
+- Amazon ElastiCache provides a fast, in-memory caching solution with Redis and Memcached
+- Ideal for improving application performance and reducing database load
+
+
+ 
+---
+
+# Amazon Keyspaces (for Apache Cassandra)
+## Managed Apache Cassandra-compatible database service
+
+---
+
+## What is Amazon Keyspaces?
+- Fully managed service for Apache Cassandra
+- Scalable, highly available, and secure
+- Compatible with Cassandra Query Language (CQL)
+
+---
+
+## Key Features
+- **Compatibility**: Supports CQL and existing Cassandra applications
+- **Scalability**: Automatically scales tables up and down
+- **High Availability**: Multi-region replication and automatic backups
+- **Security**: Encryption at rest and in transit, IAM integration
+
+---
+
+## Common Use Cases
+- **IoT Data Storage**: High-speed ingestion and querying
+- **User Profiles**: Manage user data with low-latency access
+- **Time-Series Data**: Store and retrieve time-series data efficiently
+
+---
+
+## Integration with AWS Services
+- **AWS Lambda**: Event-driven data processing
+- **Amazon S3**: Backup and restore data
+- **Amazon CloudWatch**: Monitoring and logging
+- **AWS Glue**: Data integration and ETL
+
+---
+
+## Pricing
+- **Pay-per-Request**: Based on read/write capacity units
+- **Storage**: Charges for data stored
+- **Free Tier**: Limited read/write capacity and storage
+
+---
+
+## Summary
+- Amazon Keyspaces provides a scalable and fully managed Cassandra-compatible database solution
+- Ideal for applications requiring high availability and low-latency data access
+
+---
+
+# Amazon Neptune
+## Fully managed graph database service
+
+---
+
+## What is Amazon Neptune?
+- Managed graph database service
+- Supports property graph and RDF graph models
+- Designed for high performance and scalability
+
+---
+
+## Key Features
+- **Graph Models**: Supports Gremlin and SPARQL queries
+- **Scalability**: Automatically scales storage
+- **High Availability**: Multi-AZ deployments with automatic failover
+- **Security**: Encryption at rest and in transit, VPC support
+
+---
+
+## Common Use Cases
+- **Social Networks**: Manage and query social graphs
+- **Recommendation Engines**: Build recommendation systems
+- **Fraud Detection**: Identify fraudulent patterns and connections
+
+---
+
+## Integration with AWS Services
+- **AWS Lambda**: Serverless compute for graph queries
+- **Amazon S3**: Backup and restore
+- **Amazon CloudWatch**: Monitoring and logging
+- **AWS Glue**: Data integration and ETL
+
+---
+
+## Pricing
+- **Instance-Based**: Charges based on instance hours and storage
+- **Data Transfer**: Charges for data transferred out of AWS
+- **Free Tier**: Limited usage for testing and small projects
+
+---
+
+## Summary
+- Amazon Neptune provides a scalable and fully managed graph database solution
+- Ideal for applications requiring complex and highly connected data
+
+---
+
+# Amazon Quantum Ledger Database (Amazon QLDB)
+## Fully managed ledger database
+
+---
+
+## What is Amazon QLDB?
+- Fully managed ledger database service
+- Provides a transparent, immutable, and cryptographically verifiable transaction log
+
+---
+
+## Key Features
+- **Immutability**: Append-only journal
+- **Cryptographic Verification**: Ensures data integrity
+- **Scalability**: Automatically scales with demand
+- **Security**: Encryption at rest and in transit, IAM integration
+
+---
+
+## Common Use Cases
+- **Financial Transactions**: Record and track financial transactions
+- **Supply Chain Management**: Maintain an immutable record of supply chain events
+- **Identity Management**: Store and verify identity records
+
+---
+
+## Integration with AWS Services
+- **AWS Lambda**: Trigger actions based on ledger events
+- **Amazon S3**: Backup and export data
+- **Amazon CloudWatch**: Monitoring and logging
+- **AWS Glue**: Data integration and ETL
+
+---
+
+## Pricing
+- **Pay-per-Use**: Charges based on the volume of data and read/write operations
+- **Free Tier**: Limited read/write operations and storage
+
+---
+
+## Summary
+- Amazon QLDB provides a transparent and immutable ledger database
+- Ideal for applications requiring a secure and verifiable transaction log

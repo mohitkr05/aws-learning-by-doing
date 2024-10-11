@@ -16,6 +16,7 @@ theme:
 
 nav:
   - Home: "index.md"
+  - AI-CLF01: "aws-ai-practitioner-certification/docs/index.md"
   - Join Discord:  "https://discord.gg/tnZnWqnu9F"
 
 markdown_extensions:
