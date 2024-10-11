@@ -1,0 +1,32 @@
+Resources:
+  myInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties: 
+      ImageId: ami-0dee22c13ea7a9a67
+      InstanceType: t2.micro
+      KeyName: awsbootcamp2
+      SubnetId: subnet-0a6edcb72438ffa20 
+      SecurityGroupIds:
+        - sg-04b064fc67e775619
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo apt-get update
+          sudo apt-get install -y nginx
+          sudo systemctl start nginx
+          sudo systemctl enable nginx
+          sudo chown ubuntu:ubuntu /var/www/html
+          echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+  publicIP:
+    Type: 'AWS::EC2::EIP'
+    Properties: 
+      Domain: 'vpc'
+  eipAssoc:
+    Type: 'AWS::EC2::EIPAssociation'
+    Properties:
+      AllocationId: !GetAtt publicIP.AllocationId
+      InstanceId: !Ref myInstance
+
+Outputs:
+  myInstance:
+    Value: !Ref myInstance

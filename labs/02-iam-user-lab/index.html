@@ -8,7 +8,7 @@
         <meta name="author" content="Mohit Kumar">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>02 iam user lab - AWS Learning by doing</title>
+        <title>Lab for creating an IAM user - AWS Learning by doing</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -36,6 +36,9 @@
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
                                 <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../aws-ai-practitioner-certification/docs/index.md" class="nav-link">AI-CLF01</a>
                             </li>
                             <li class="nav-item">
                                 <a href="https://discord.gg/tnZnWqnu9F" class="nav-link">Join Discord</a>
@@ -68,12 +71,34 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#lab-for-creating-an-iam-user" class="nav-link">Lab for creating an IAM user</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#creating-the-iam-user" class="nav-link">Creating the IAM User</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="lab-for-creating-an-iam-user">Lab for creating an IAM user</h1>
+<p>Lab for creating an IAM user, according to AWS best practices.</p>
+<h2 id="creating-the-iam-user">Creating the IAM User</h2>
+<p>To add a new user:</p>
+<h3 id="step-1">Step 1</h3>
+<p>IAM console -&gt; User (left nav panel) -&gt; Add user</p>
+<h3 id="step-2">Step 2</h3>
+<p>Create a username and check on the access type you want. If you are using from application to access resources you might want to go with "Access key - Programmatic access". Programmatic access provides you with an access key and secret key. If you simply want your employee to have access to resources you might want to go with "Password - AWS Management Console access". You can also choose to check on both the checkboxes(programmatic access and AWS management console access). Now click next.</p>
+<h3 id="step-3">Step 3</h3>
+<p>You can choose to add users to a group(discussed below). If you don't have any group you can create group or skip this and add it later, click next.</p>
+<h3 id="step-4">Step 4</h3>
+<p>You can choose to add key-value such as user's email for example. The key would be Email and value would be person@mail.com. You can also choose to skip this. Click on next.</p>
+<h3 id="step-5">Step 5</h3>
+<p>Now review your choice and click on create.</p></div>
             </div>
         </div>
 

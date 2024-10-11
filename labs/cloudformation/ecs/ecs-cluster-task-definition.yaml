@@ -23,7 +23,7 @@ Resources:
             - sh
             - '-c'
           Essential: true
-          Image: 'httpd:2.4'
+          Image: 'httpd:latest'
           LogConfiguration:
             LogDriver: awslogs
             Options:
