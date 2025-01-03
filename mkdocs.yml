@@ -1,9 +1,9 @@
-site_name: "AWS Learning by doing"
+site_name: "Learning AWS by doing"
 copyright: "Mohit Kumar"
 dev_addr: "127.0.0.1:8000"
 docs_dir: docs
 site_author: "Mohit Kumar" 
-site_description: "AWS learning by doing"
+site_description: "Learn AWS - by doing. A complete hands-on learning of AWS services."
 repo_url: "https://github.com/mohitkr05/aws-learning-by-doing"
 
 

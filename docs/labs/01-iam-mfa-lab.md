@@ -16,8 +16,6 @@ In this section, we will create a user with administrator permissions using the 
 
 Select Programmatic Access to allow use of the CLI, or AWS Management Console Access to allow login and access through the AWS console. Click on Next: Permissions.
 
-Image 02
-
 5. In the Groups section, we would include this user in a group, but we will address the Groups section in another part of this tutorial.
 6. Select the "Attach existing policies directly" tab and choose the permission that this user needs. In this tutorial, we will choose AdministratorAccess (in practice, be very careful when using this type of permission). Click on Next: Tags.
 7. In this section, we can define tags to facilitate management.
